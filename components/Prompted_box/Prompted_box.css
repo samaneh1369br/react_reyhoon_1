@@ -1,0 +1,38 @@
+@media  (min-width:320px) {
+    .section-bg{
+        width: 100%;
+        background-image: url('https://www.reyhoon.com/react-assets/dist/9b1766f8.jpg'); 
+        background-size: cover;
+        background-position:  right;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        height:auto;
+
+    }
+    .margin-v-45.margin-v-45{
+        margin:45px auto;
+     }
+    .good-resturant{
+                    
+        position: relative;
+        top:10%;
+        margin-top:3;
+        background-color: transparent;
+}
+}
+@media   (min-width:769px) {
+    .section-bg.section-bg{
+                    
+        margin: 90px auto;
+        height:60rem;
+    }
+}
+@media (min-width:1025px){
+    .good-resturant{
+        position: relative;
+        top:10%;
+        left: -10%;
+        margin-top:3;
+        background-color: transparent;
+    }
+}

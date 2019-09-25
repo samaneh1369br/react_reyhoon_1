@@ -1,0 +1,31 @@
+.stars{
+    background-color: aliceblue;
+    border: 1px solid transparent;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    clip-path: polygon(
+        50% 0%,
+        63% 38%,
+        100% 38%,
+        69% 59%,
+        82% 100%,
+        50% 75%,
+        18% 100%,
+        31% 59%,
+        0% 38%,
+        37% 38%
+        );
+}
+.active {background-color: gold;
+    border: 1px solid gold}
+.parent{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row-reverse
+}

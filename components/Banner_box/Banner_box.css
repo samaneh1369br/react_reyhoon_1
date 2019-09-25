@@ -1,0 +1,17 @@
+@media  (min-width:320px) {
+    .header{
+        background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://dist.reyhoon-static.com/web-assets/images/backgrounds/home-page-bg.jpg?x-oss-process=image/resize,w_1600/interlace,1/quality,q_60");
+        height: 50rem;
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 30rem;
+    }
+}
+@media   (min-width:769px) {
+
+    .header{
+        height: 65rem;
+    } 
+}

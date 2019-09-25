@@ -1,0 +1,51 @@
+@media  (min-width:320px) {
+    .good-resturant-flex {
+        width:90%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+        color:#777;
+    }
+
+    .good-resturant-flex div{
+        width:20%; 
+        height: auto;
+        margin:0.5rem  ;
+        font-size: 0.98rem;
+        text-align: center;
+        line-height: 1.250em;
+    }
+
+    .good-resturant-flex  img{
+        max-width:100%;
+        
+    }
+
+    .good-resturant-flex p{
+        font-size: 1.5rem;
+    }
+
+    .good-resturant-flex h1{
+        width:90%;
+        font-size: 2rem;
+        color: black;
+    }
+}
+@media (min-width:1025px){
+    .good-resturant-flex {
+        width: 53rem;
+    }
+
+    
+
+    .good-resturant-flex {
+        margin: 0;
+    }
+
+    .good-resturant-flex h1{
+        text-align: start;
+    }
+
+}

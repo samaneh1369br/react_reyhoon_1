@@ -1,0 +1,32 @@
+[
+    {
+      "id":0,
+      "image":"https://dist.reyhoon-static.com/uploads/images/restaurants/logos/baguette_5494_1536561462.jpeg@!branch_logo_web_default",
+      "name":"باگت (اندرزگو)",
+      "description":" ،هات داگ،فست فود",
+      "rateAverage":55,
+      "address":"بلوار اندرزگو، بین کاوه و قیطریه، نبش مهر محمدی جنوبی",
+      "voteNumber":15
+    },
+      {
+        "id":1,
+        "image":"https://dist.reyhoon-static.com/uploads/images/restaurants/logos/shila_8_1540375602.jpeg@!branch_logo_web_default",
+        "name":"شیلا (مطهری)",
+        "description": " ،هات داگ،فست فود" ,
+        "rateAverage":70,
+        "address":"ولیعصر، مطهری، فتحی شقاقی، زیر برج بلورین",
+        "voteNumber":3.5
+    },
+      {
+        "id":2,
+        "image":"https://dist.reyhoon-static.com/uploads/images/restaurants/logos/pizza-hot_15_1536498282.jpeg@!branch_logo_web_default",
+        "name":"پیتزا هات (سعادت آباد)",
+        "description":" ،هات داگ،فست فود",
+        "rateAverage":25,
+        "address":"سعادت آباد، پاساژ میلاد نور، طبقه همکف",
+        "voteNumber":12
+    } 
+  ]
+
+
+  

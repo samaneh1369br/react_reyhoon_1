@@ -1,0 +1,36 @@
+@media  (min-width:320px) {
+    .section-flex{
+        /* background-color: aquamarine; */
+        /* margin: 15px auto; */
+        width: 150rem;
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: space-between;
+    }
+    .center-text{
+        text-align: center;
+    }
+    .heading h1{
+        margin: 0;
+        color: white;
+        font-weight: bold;
+        font-size: 2.1rem;
+        line-height: 3rem;
+        text-shadow: 0px 0px 15px  rgba(51, 49, 49,0.89);
+
+    }
+
+    .heading{
+        width: 100%;;
+        flex-flow:column wrap;
+        justify-content: center;
+    }
+    .margin-v-30.margin-v-30{
+        margin:30px auto;
+    }
+}
+@media   (min-width:769px) {
+    .margin-v-90.margin-v-90{
+        margin: 90px 0;
+    }
+}

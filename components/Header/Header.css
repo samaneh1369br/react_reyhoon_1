@@ -1,0 +1,58 @@
+@media  (min-width:320px) {
+    .nav-flex{ 
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-around;
+        height:5.5rem;
+        background-color: white;
+        margin: auto;
+        align-items: center;
+ }
+    
+.help{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+}
+
+.help ul {
+        list-style: none;
+        color:rgb(54, 53, 53);
+        margin: auto;
+        
+}
+ul.help { 
+        width:3.3rem;
+        
+}
+
+.dash.dash{
+        width:15px;
+        text-align: right;
+}
+.login{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        width:10.9rem;
+        align-self: flex-start;
+        margin: 0;
+        padding: 0;
+}
+    
+.login li{
+        width:6.3rem;
+        text-align: center;
+}
+    
+.horizontal-line {
+        height: 3px;
+        background-image: linear-gradient(to right, #ee1071, #df0081, #cb0092, #b000a2, #8c05b1);
+}
+.logo-reyhoon{
+    height:2.6rem;
+    width:8rem;
+}
+
+
+}
