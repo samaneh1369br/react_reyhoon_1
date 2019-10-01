@@ -58,15 +58,22 @@
         border: 1px solid transparent;
         background: transparent;
         border-radius: 4px;
+        font-size: 1.4rem;
     }
     .btn-in-box{
-        border:1px solid rgb(248, 3, 105);
+        border:0.1rem solid #d40062;
         border-radius: 15px;
         padding: 7px 12px;
         width: 13.3rem;
-        color: rgb(248, 3, 105);
+        color:#d40062;
+        font-weight: 400;
         background: white;
         align-self:center;
+        text-decoration: none;
+    }
+    a:hover  {
+     background:rgba(216, 155, 211, 0.322);
+     cursor:pointer;
     }
 }
 @media   (min-width:481px) {

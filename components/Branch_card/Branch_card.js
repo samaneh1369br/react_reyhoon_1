@@ -34,9 +34,9 @@ export default class BranchCard extends React.Component{
                             {
                                 this.state.dataResturant.map((item,index)=>{ 
                                         return(
-                                            <div className="resturant-flex column-direction flex-evenly">
+                                        <div className="resturant-flex column-direction flex-evenly">
                                             <div>
-                                            <img src={item.image}/>
+                                                <img src={item.image}/>
                                             </div>
                                             <h1>{item.name}</h1>
                                             <div className="div_flex">
@@ -46,7 +46,7 @@ export default class BranchCard extends React.Component{
                                             </div>
                                             <div>{item.description}</div> 
                                             <p>{item.address}</p>
-                                            <button className="btn btn-in-box">شروع سفارش</button>
+                                            <a href="#" className="btn btn-in-box">شروع سفارش</a>
                                         </div>
                                         )
 

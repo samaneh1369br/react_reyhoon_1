@@ -307,7 +307,8 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   render() {
     return __jsx("section", {
       style: {
-        marginBottom: '30px'
+        marginBottom: '30px',
+        marginTop: "45px !important"
       },
       className: "header-form-section margin-v-60",
       __source: {
@@ -486,9 +487,9 @@ const Heading = () => {
   }, __jsx("h1", {
     style: {
       marginBottom: '0',
-      marginTop: "60px"
+      marginTop: "135px !important"
     },
-    className: "margin-v-30 margin-v-90",
+    className: "margin-v-30 ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -750,7 +751,8 @@ class BranchCard extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
           lineNumber: 48
         },
         __self: this
-      }, item.address), __jsx("button", {
+      }, item.address), __jsx("a", {
+        href: "#",
         className: "btn btn-in-box",
         __source: {
           fileName: _jsxFileName,
@@ -2192,23 +2194,23 @@ const showCaseData = [{
   }),
   id: 1
 }, {
-  heading: 'غذایتان را نوش‌جان کنید',
-  comment: 'درب منزل یا حضوری از خود رستوران سفارشتان را تحویل بگیرید.',
-  icon: __jsx(_Svg_heart_Svg_heart__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  heading: 'شهر و منطقه خود را وارد کنید',
+  comment: 'منوی مورد علاقه خود را از بین بیش از 4000 رستوران خوب در تهران و شهرستان‌ها جستجو کنید.',
+  icon: __jsx(_Svg_location_Svg_location__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: undefined
   }),
   id: 2
 }, {
-  heading: 'غذایتان را نوش‌جان کنید',
-  comment: 'درب منزل یا حضوری از خود رستوران سفارشتان را تحویل بگیرید.',
-  icon: __jsx(_Svg_heart_Svg_heart__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  heading: 'غذای خود را انتخاب کنید',
+  comment: 'غذایی که می‌خواهید را انتخاب کنید و بدون هزینه اضافی سفارش خود را ثبت کنید.',
+  icon: __jsx(_Svg_spoon_and_fork_Svg_spoon_and_fork__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   }),
@@ -2223,7 +2225,7 @@ function renderShowcaseCard() {
     children: card.icon,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: this
   }));
@@ -2238,7 +2240,7 @@ const ShowCase = () => {
     className: "container-flex row-direction flex-around  container-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 65
     },
     __self: undefined
   }, renderShowcaseCard());
@@ -3378,79 +3380,86 @@ const Index = () => {
       lineNumber: 20
     },
     __self: undefined
-  }, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx("div", {
+    className: "all",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: undefined
-  }), __jsx(_components_Banner_box_Banner_box__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: undefined
-  }), __jsx(_components_Show_case_Show_case__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(_components_Banner_box_Banner_box__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: undefined
-  }), __jsx(_components_Branch_card_Branch_card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_components_Show_case_Show_case__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: undefined
-  }), __jsx(_components_Prompted_box_Prompted_box__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), __jsx(_components_Branch_card_Branch_card__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: undefined
-  }), __jsx(_components_Cuisines_card_Cuisines_card__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), __jsx(_components_Prompted_box_Prompted_box__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: undefined
-  }), __jsx(_components_Tags_card_Tags_card__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }), __jsx(_components_Cuisines_card_Cuisines_card__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }), __jsx(_components_Download_app_Download_app__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }), __jsx(_components_Tags_card_Tags_card__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: undefined
-  }), __jsx(_components_Bg_diagonal_Bg_diagonal__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }), __jsx(_components_Download_app_Download_app__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
-  }), __jsx(_components_Article_Article__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }), __jsx(_components_Bg_diagonal_Bg_diagonal__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: undefined
-  }), __jsx(_components_Question_Question__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }), __jsx(_components_Article_Article__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: undefined
-  }), __jsx(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }), __jsx(_components_Question_Question__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: undefined
-  }));
+  }), __jsx(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index); // class Index extends React.Component{

@@ -1,7 +1,5 @@
 @media  (min-width:320px) {
     .section-flex{
-        /* background-color: aquamarine; */
-        /* margin: 15px auto; */
         width: 150rem;
         display: flex;
         flex-flow:row wrap;
@@ -14,7 +12,7 @@
         margin: 0;
         color: white;
         font-weight: bold;
-        font-size: 2.1rem;
+        font-size: 3rem;
         line-height: 3rem;
         text-shadow: 0px 0px 15px  rgba(51, 49, 49,0.89);
 
@@ -30,7 +28,7 @@
     }
 }
 @media   (min-width:769px) {
-    .margin-v-90.margin-v-90{
-        margin: 90px 0;
+    .margin-v-105.margin-v-105{
+        margin: 135px 0 0 0 !important;
     }
 }

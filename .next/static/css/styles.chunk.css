@@ -1,65 +1,77 @@
 @media  (min-width:320px) {
-    .nav-flex{ 
-        display: flex;
-        flex-flow: row-reverse nowrap;
-        justify-content: space-around;
-        height:5.5rem;
-        background-color: white;
-        margin: auto;
-        align-items: center;
- }
-    
-.help{
-        display:flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-}
-
-.help ul {
-        list-style: none;
-        color:rgb(54, 53, 53);
-        margin: auto;
+        .nav-flex{ 
+                display: flex;
+                flex-flow: row-reverse nowrap;
+                justify-content: space-around;
+                height:5.5rem;
+                background-color: white;
+                margin: auto;
+                align-items: center;
+        }
         
-}
-ul.help { 
-        width:3.3rem;
+        .help{
+                display:flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+        }
+          
+        .help ul {
+                list-style: none;
+                color:rgb(54, 53, 53);
+                margin: auto;
+        }
+
+        ul.help { 
+                width:3.3rem;
+        }
+
+        .dash.dash{
+                width:15px;
+                text-align: right;
+        }
+
+        .login{
+                display:flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width:10.9rem;
+                align-self: flex-start;
+                margin: 0;
+                padding: 0;
+        }
         
+        .login li{
+                width:6.3rem;
+                text-align: center;
+        }
+        
+        .horizontal-line {
+                height: 3px;
+                background-image: linear-gradient(to right, #ee1071, #df0081, #cb0092, #b000a2, #8c05b1);
+        }
+
+        .logo-reyhoon{
+                height:3.5rem;
+                width:12rem;
+        }
+
+        .container-width{
+                width:100% ;
+        }
 }
 
-.dash.dash{
-        width:15px;
-        text-align: right;
+@media   (min-width:481px) {
+        .container-width{
+                width:100% ;
+            }
 }
-.login{
-        display:flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        width:10.9rem;
-        align-self: flex-start;
-        margin: 0;
-        padding: 0;
-}
-    
-.login li{
-        width:6.3rem;
-        text-align: center;
-}
-    
-.horizontal-line {
-        height: 3px;
-        background-image: linear-gradient(to right, #ee1071, #df0081, #cb0092, #b000a2, #8c05b1);
-}
-.logo-reyhoon{
-    height:2.6rem;
-    width:8rem;
-}
-
-
+@media (min-width:1281px){
+        .container-width{
+                width:1200px ;
+            }
 }
 @media  (min-width:320px) {
     .section-flex{
-        /* background-color: aquamarine; */
-        /* margin: 15px auto; */
         width: 150rem;
         display: flex;
         flex-flow:row wrap;
@@ -72,7 +84,7 @@ ul.help {
         margin: 0;
         color: white;
         font-weight: bold;
-        font-size: 2.1rem;
+        font-size: 3rem;
         line-height: 3rem;
         text-shadow: 0px 0px 15px  rgba(51, 49, 49,0.89);
 
@@ -88,8 +100,8 @@ ul.help {
     }
 }
 @media   (min-width:769px) {
-    .margin-v-90.margin-v-90{
-        margin: 90px 0;
+    .margin-v-105.margin-v-105{
+        margin: 135px 0 0 0 !important;
     }
 }
 @media  (min-width:320px) {
@@ -237,7 +249,9 @@ ul.help {
 @media   (min-width:769px) {
 
     .header{
-        height: 65rem;
+        height: 100vh;
+        min-height: 70rem;
+        max-height: 90rem;
     } 
 }
 
@@ -274,15 +288,19 @@ body,html {
     height: 100%;
     margin: 0;
     font-family: "Shabnam", serif;
-    background-color: rgb(249, 249, 253)
+    background-color: rgb(249, 249, 253);
+    overflow-x: hidden;
   }
   @media  (min-width:320px) {
    
- section{margin: 90px auto !important;}
+    section{
+      margin: 90px auto !important;
+    }
                 
     body{
         font-size: 1.4rem;
     }
+    
   }
 .box-flex-h2{
     color: #777;
@@ -401,15 +419,22 @@ body,html {
         border: 1px solid transparent;
         background: transparent;
         border-radius: 4px;
+        font-size: 1.4rem;
     }
     .btn-in-box{
-        border:1px solid rgb(248, 3, 105);
+        border:0.1rem solid #d40062;
         border-radius: 15px;
         padding: 7px 12px;
         width: 13.3rem;
-        color: rgb(248, 3, 105);
+        color:#d40062;
+        font-weight: 400;
         background: white;
         align-self:center;
+        text-decoration: none;
+    }
+    a:hover  {
+     background:rgba(216, 155, 211, 0.322);
+     cursor:pointer;
     }
 }
 @media   (min-width:481px) {
@@ -917,7 +942,7 @@ body,html {
 
     .bg-diagonal{
         display:block;
-        width:110%;
+        width:100%;
         height:100rem;
         clip-path: polygon(0 27%, 100% 16%, 100% 73%, 0 83%);
         background-image: url('https://www.reyhoon.com/react-assets/faq-background.jpg');

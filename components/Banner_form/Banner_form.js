@@ -29,7 +29,7 @@ class Form  extends React.Component {
     }
     render(){
      return(   
-      <section  style={{marginBottom: '30px'}} className="header-form-section margin-v-60" >
+      <section  style={{marginBottom: '30px', marginTop:"45px !important"}} className="header-form-section margin-v-60" >
             <p>برای دیدن لیست رستوران‌ها و فست‌فود‌هایی که به شما سرویس می‌دهند، منطقه خود را وارد کنید.</p>
             <form onSubmit={this.submit}  className="header-form">
                 <input className="child-1" id="txt1"  type="text"  placeholder="تهران"/>

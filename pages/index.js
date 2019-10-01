@@ -18,18 +18,20 @@ const Index = () => {
     
     return(
         <React.Fragment>
-            <Header/>
-            <Banner/>
-            <ShowCase/>
-            <BranchCard/>
-            <PromptedBox/>
-            <CuisinesCard/>
-            <TagsCard/>
-            <DownloadApp/>
-            <BgDiagonal/>
-            <Article/>
-            <Question/>
-            <Footer/>
+            <div className="all">
+                <Header/>
+                <Banner/>
+                <ShowCase/>
+                <BranchCard/>
+                <PromptedBox/>
+                <CuisinesCard/>
+                <TagsCard/>
+                <DownloadApp/>
+                <BgDiagonal/>
+                <Article/>
+                <Question/>
+                <Footer/>
+            </div>
         </React.Fragment>
     )
 }

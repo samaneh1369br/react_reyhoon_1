@@ -7,13 +7,17 @@ body,html {
     height: 100%;
     margin: 0;
     font-family: "Shabnam", serif;
-    background-color: rgb(249, 249, 253)
+    background-color: rgb(249, 249, 253);
+    overflow-x: hidden;
   }
   @media  (min-width:320px) {
    
- section{margin: 90px auto !important;}
+    section{
+      margin: 90px auto !important;
+    }
                 
     body{
         font-size: 1.4rem;
     }
+    
   }
