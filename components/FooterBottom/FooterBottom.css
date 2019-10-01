@@ -1,0 +1,25 @@
+@media  (min-width:320px) {
+        .footer-bottom{
+            background-color: #191919;
+            display: flex;
+            flex-flow: row-reverse wrap;
+            justify-content: space-around;
+            height: auto;
+            align-items: center;
+        }
+
+        .footer-bottom div a svg{
+            width: 2.5rem;
+
+        }
+
+        .footer-bottom div a , .footer-bottom div{
+            padding: 0 10px;
+            color:#b3a7a7
+        }
+}
+@media (min-width:1025px){
+        .footer-bottom{
+            height: 9rem;
+        }
+}

@@ -1,5 +1,6 @@
 import "./Cuisines_card.css"
 import CuisinesInner from "../Cuisines_inner/Cuisines_inner"
+import CuisinesHeader from "../Cuisines_header/Cuisines_header"
 
 const CuisinesData=[
     {food:"کباب",
@@ -28,9 +29,12 @@ function renderCuisinesCard(){
 
 const CuisinesCard=()=>{
     return(
-        <section className="container-flex img-box-flex container-width">
-            {renderCuisinesCard()}
-        </section> 
+        <React.Fragment>
+            <CuisinesHeader/>
+            <section style={{marginTop:"0 !important"}} className="container-flex img-box-flex container-width">
+                {renderCuisinesCard()}
+            </section> 
+        </React.Fragment>
     
     )
     }

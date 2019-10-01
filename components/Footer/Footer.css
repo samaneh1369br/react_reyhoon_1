@@ -1,0 +1,10 @@
+.footer{
+    color:#9b9b9b;
+    background-color:#202020;
+    height:auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}

@@ -18,7 +18,7 @@ class DownloadAppForm extends React.Component{
     return(
         <form class="app-flex-form" onSubmit={this.handelSubmit}>
             <input  type="text" placeholder="مثلا **91234509"  required/>
-            <input   type="submit" value="دریافت لینک از طریق sms" />
+            <button   type="submit" value="" >دریافت لینک از طریق sms</button>
             <p class="app-comment-2">اپلیکیشن ریحون برای Android و iOS در دسترس است.</p>
         </form>
     )

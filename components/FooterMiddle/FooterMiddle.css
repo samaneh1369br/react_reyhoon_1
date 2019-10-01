@@ -1,0 +1,21 @@
+@media  (min-width:320px) {
+
+    .footer-middle{
+                            
+        display:none;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+    }
+
+    .footer-middle img{
+    max-width: 100%;
+    width: 135px;
+    margin: 30px;
+    }
+}
+@media (min-width:1025px){
+    .footer-middle{
+        display: flex;
+    }
+}

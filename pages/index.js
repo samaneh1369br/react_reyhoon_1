@@ -3,16 +3,17 @@
 import  Banner from "../components/Banner_box/Banner_box"
  import "./index.css"
  import ShowCase from "../components/Show_case/Show_case"
- import BestResturantInDayHeadingst from "../components/Best_resturant_in_day_heading/Best_resturant_in_day_heading";
 //  import {threeJson} from './json'
 import BranchCard from "../components/Branch_card/Branch_card"
 import PromptedBox from "../components/Prompted_box/Prompted_box"
-import CuisinesHeader from "../components/Cuisines_header/Cuisines_header"
 import CuisinesCard from "../components/Cuisines_card/Cuisines_card"
 import TagsCard from "../components/Tags_card/Tags_card"
 import DownloadApp from "../components/Download_app/Download_app"
 // import "./font.css"
-
+import BgDiagonal from "../components/Bg_diagonal/Bg_diagonal"
+import Article from "../components/Article/Article"
+import Question from "../components/Question/Question"
+import Footer from "../components/Footer/Footer"
 const Index = () => {
     
     return(
@@ -20,13 +21,15 @@ const Index = () => {
             <Header/>
             <Banner/>
             <ShowCase/>
-            <BestResturantInDayHeadingst/>
             <BranchCard/>
             <PromptedBox/>
-            <CuisinesHeader/>
             <CuisinesCard/>
             <TagsCard/>
             <DownloadApp/>
+            <BgDiagonal/>
+            <Article/>
+            <Question/>
+            <Footer/>
         </React.Fragment>
     )
 }

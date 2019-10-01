@@ -1,0 +1,20 @@
+@media  (min-width:320px) {
+
+    .a-in-app-flex{
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    .a-in-app-flex a{
+        width:90%;
+        margin:15px 0;
+        text-align: center;
+    }
+}
+@media (min-width:1025px){
+
+    .a-in-app-flex a{
+        width:28%;
+    }
+}

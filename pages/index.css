@@ -11,7 +11,7 @@ body,html {
   }
   @media  (min-width:320px) {
    
-
+ section{margin: 90px auto !important;}
                 
     body{
         font-size: 1.4rem;

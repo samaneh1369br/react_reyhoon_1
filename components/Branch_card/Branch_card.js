@@ -1,6 +1,8 @@
 import threeJson from "../../assets/best_three_good_resturant"
 import "./Branch_card.css"
 import StarRating from "../Star_rating/Star_rating"
+import BestResturantInDayHeadingst from "../Best_resturant_in_day_heading/Best_resturant_in_day_heading"
+
 export default class BranchCard extends React.Component{
     constructor(){
         super()
@@ -25,32 +27,35 @@ export default class BranchCard extends React.Component{
     }
     render(){
         return(
-            <section className="container-flex row-direction phablet-only-max container-width">
-                        {
-                            this.state.dataResturant.map((item,index)=>{ 
-                                       return(
-                                        <div className="resturant-flex column-direction flex-evenly">
-                                        <div>
-                                          <img src={item.image}/>
-                                        </div>
-                                        <h1>{item.name}</h1>
-                                        <div className="div_flex">
-                                            <span className="gold">{item.voteNumber}</span>
-                                            <StarRating rating={item.rateAverage}/>
-                                            <span>({item.rateAverage})</span>
-                                        </div>
-                                        <div>{item.description}</div> 
-                                        <p>{item.address}</p>
-                                        <button className="btn btn-in-box">شروع سفارش</button>
-                                      </div>
-                                       )
+            <React.Fragment>
+                <BestResturantInDayHeadingst/>
+                <section  style={{marginTop:"0 !important"}} className="container-flex row-direction phablet-only-max container-width">
 
-                            })
-                
+                            {
+                                this.state.dataResturant.map((item,index)=>{ 
+                                        return(
+                                            <div className="resturant-flex column-direction flex-evenly">
+                                            <div>
+                                            <img src={item.image}/>
+                                            </div>
+                                            <h1>{item.name}</h1>
+                                            <div className="div_flex">
+                                                <span className="gold">{item.voteNumber}</span>
+                                                <StarRating rating={item.rateAverage}/>
+                                                <span>({item.rateAverage})</span>
+                                            </div>
+                                            <div>{item.description}</div> 
+                                            <p>{item.address}</p>
+                                            <button className="btn btn-in-box">شروع سفارش</button>
+                                        </div>
+                                        )
 
-                            
-                        }
-            </section>
+                                }
+                            )
+                    
+                            }
+                </section>
+            </React.Fragment>
             )
     
     }

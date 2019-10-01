@@ -60,7 +60,7 @@ function renderShowcaseCard() {
 
 const ShowCase=()=>{
 return(
-    <section className="container-flex row-direction flex-around  container-width"> 
+    <section style={{marginBottom:"45px !important"}} className="container-flex row-direction flex-around  container-width"> 
         {renderShowcaseCard()}
     </section> 
 

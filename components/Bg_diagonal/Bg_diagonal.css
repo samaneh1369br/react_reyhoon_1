@@ -1,0 +1,23 @@
+@media  (min-width:320px) {
+    .margin-v-30.margin-v-30{
+        margin:30px auto;
+    }
+    .bg-diagonal{
+        display:none;
+        
+    }
+}
+@media (min-width:1025px){
+
+    .bg-diagonal{
+        display:block;
+        width:110%;
+        height:100rem;
+        clip-path: polygon(0 27%, 100% 16%, 100% 73%, 0 83%);
+        background-image: url('https://www.reyhoon.com/react-assets/faq-background.jpg');
+        background-repeat: no-repeat;
+        background-position: 30%;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
