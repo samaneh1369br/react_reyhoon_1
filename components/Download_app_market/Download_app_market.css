@@ -1,20 +1,29 @@
 @media  (min-width:320px) {
-
     .a-in-app-flex{
         display: flex;
         flex-flow: row wrap;
-
     }
-
-    .a-in-app-flex a{
+    .marketImage{
+        max-width: 100%;
+        max-height: 100%;
+        width: 19.9rem;
+        height: 60px;
+    }
+    .marketLink{
         width:90%;
         margin:15px 0;
         text-align: center;
+        box-sizing: border-box;
+    }
+    .marketLink:hover{
+    box-shadow:  1px 1px 2px 1px rgba(0, 0,0,0.5);
     }
 }
 @media (min-width:1025px){
-
-    .a-in-app-flex a{
-        width:28%;
+    .marketLink{
+        width:19.9rem;
+        height: 60px;
+        margin: 2px;
+        border-radius: 5px;
     }
 }

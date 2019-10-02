@@ -1,6 +1,5 @@
 @media  (min-width:320px) {
     .app{
-                            
         position: relative;
         width:90%;
         height: auto;
@@ -25,7 +24,6 @@
         bottom:10rem;
     }
 
-    
     .app-h-1{
         text-align: center;
         font-size: 2rem;
@@ -42,14 +40,12 @@
         font-size: 1.4rem;
         color: rgb(153, 146, 146);
     }
-
     .app-comment-3{
         text-align: center;
         font-size:1rem;
         color: rgb(153, 146, 146);
     }
-
-    
+  
 }
 @media (min-width:1025px){
     .app.app{

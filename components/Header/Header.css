@@ -2,7 +2,7 @@
         .nav-flex{ 
                 display: flex;
                 flex-flow: row-reverse nowrap;
-                justify-content: space-around;
+                justify-content: space-between;
                 height:5.5rem;
                 background-color: white;
                 margin: auto;
@@ -53,18 +53,24 @@
         .logo-reyhoon{
                 height:3.5rem;
                 width:12rem;
+                margin: 0 1.5rem;
         }
 
         .container-width{
                 width:100% ;
         }
+        .nav-flex a{
+                text-decoration: none;
+                color: #4a4a4a;
+                font-size: 1.4rem
+        }
+        .nav-flex a:hover{
+                color:#cb0092;
+                cursor: pointer;
+        }
 }
 
-@media   (min-width:481px) {
-        .container-width{
-                width:100% ;
-            }
-}
+
 @media (min-width:1281px){
         .container-width{
                 width:1200px ;

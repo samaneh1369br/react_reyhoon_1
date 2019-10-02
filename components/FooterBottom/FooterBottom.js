@@ -7,39 +7,44 @@ import "./FooterBottom.css"
 const SvgComponentData=[
    {
         icon:<SvgFacebookIcon/>,
-        href:""
+        href:"",
+        id:0
     },
    {
        icon:<SvgInstagramIcon/>,
-       href:""
+       href:"",
+       id:1
     },
     {
         icon:<SvgGoogleIcon/>,
-        href:""
+        href:"",
+        id:2
     },
     {
         icon:<SvgTwitterIcon/>,
-        href:""
+        href:"",
+        id:3
     },
     {
         icon:<SvgTelegramIcon/>,
-        href:""
+        href:"",
+        id:4
     }
 ]
  const  SvgComponentRender=()=>{
     const RenderedSvgComponent=SvgComponentData.map(
-        (icon)=><a href={icon.href}>{icon.icon}</a>
+        (icon)=><a key={icon.id} href={icon.href}>{icon.icon}</a>
     )
     return RenderedSvgComponent
  }
 
  const FooterBottom=()=>{
      return(
-        <div class="footer-bottom" >
-            <div class="margin-v-15">
+        <div className="footer-bottom" >
+            <div className="margin-v-15">
                 {SvgComponentRender()}
             </div>
-            <div class="margin-v-15">
+            <div className="margin-v-15">
                     © 2017, <a href="/">Reyhoon</a>, All Rights Reserved.
             </div>
         </div>

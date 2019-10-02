@@ -1,11 +1,9 @@
 import "./Question.css"
 export default function Question(){
-
     return(
-   
         <section className="any-question margin-v-30">
                 <h3>آیا سوال بیشتری دارید؟</h3>
-                <button className="btn-in-box btn-in-box">راهنما</button>
+                <a className="qusetionLink" href="https://www.manesht.com" target="_blank">راهنما</a>
         </section>
     )
 }

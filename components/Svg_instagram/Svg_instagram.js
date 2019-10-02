@@ -1,6 +1,6 @@
 const SvgInstagram=()=>{
     return(
-        <svg style={{fill:"currentColor"}} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" xmlnsXlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 409.221 409.221">
+        <svg style={{fill:"currentColor"}} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" xmlnsXlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 409.221 409.221">
             <g fill="#9B9B9B">
                 <path fill="currentColor" d="M12.52 1H5.392A4.396 4.396 0 0 0 1 5.391v7.13a4.396 4.396 0 0 0 4.391 4.39h7.13a4.396 4.396 0 0 0 4.39-4.39V5.39A4.396 4.396 0 0 0 12.522 1zm2.98 11.52a2.983 2.983 0 0 1-2.98 2.98H5.392a2.983 2.983 0 0 1-2.98-2.98V5.392a2.983 2.983 0 0 1 2.98-2.98h7.13a2.983 2.983 0 0 1 2.979 2.98v7.13z">
                 </path>
@@ -8,6 +8,6 @@ const SvgInstagram=()=>{
                 </path>
             </g>
         </svg>
-     )
+    )
 }
 export default SvgInstagram

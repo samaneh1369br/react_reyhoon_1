@@ -17,33 +17,32 @@ const foodTags=[
      {title:"پاستا",
      id:7},
      {title:"چلوکباب",
-     id:0},
+     id:8},
      {title:"ماهی",
-     id:0},
+     id:9},
      {title:"استیک",
-     id:0},
+     id:10},
      {title:"بشقاب",
-     id:0},
+     id:11},
      {title:"صبحانه",
-     id:0},
+     id:12},
      {title:"سوپ",
-     id:0},
+     id:13},
      {title:"غذاهای دریایی",
-     id:0},
+     id:14},
      {title:"آبمیوه طبیعی",
-     id:0},
+     id:15},
 ]
 function tagsCardRender(){
     const Renderedtags=foodTags.map(
-        (tags)=><h3 key={tags.id}><a href="#">{tags.title}</a></h3>
+        (tags)=><h3 key={tags.id}><a className="tagsLink" href="#">{tags.title}</a></h3>
     )
     return(Renderedtags)
 }
-
 const TagsCard=()=>{
     return(
-        <section class="more-food ">
-             <div class="more-food-flex container-width margin-v-15 ">
+        <section className="more-food ">
+             <div className="more-food-flex container-width margin-v-15 ">
                  <h1>انتخاب غذای بیشتر</h1>
                  {tagsCardRender()}
              </div>

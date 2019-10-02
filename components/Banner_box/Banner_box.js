@@ -8,5 +8,6 @@ const Banner = () => {
             <Heading />
             <Form />
         </div>
-    )}
+    )
+}
 export default Banner;

@@ -7,13 +7,11 @@
         background-attachment: scroll;
         background-repeat: no-repeat;
         height:auto;
-
     }
     .margin-v-45.margin-v-45{
         margin:45px auto;
      }
     .good-resturant{
-                    
         position: relative;
         top:10%;
         margin-top:3;
@@ -22,7 +20,6 @@
 }
 @media   (min-width:769px) {
     .section-bg.section-bg{
-                    
         margin: 30px auto;
         height:60rem;
     }

@@ -1,19 +1,24 @@
 @media  (min-width:320px) {
 
-.any-question{
-    text-align: center;
-      font-size: 2rem;
-      color:#4a4a4a;
-      font-weight: normal;
-      margin: 30px auto !important;
-}
-  
-.any-question button{
-      font-size:1.05em;
-      background-color: #ffc300;
-      color: white;
-      border: none;
-      width: 16.3rem;
-  
-}
+      .any-question{
+      text-align: center;
+            font-size: 2rem;
+            color:#4a4a4a;
+            font-weight: normal;
+            margin: 30px auto !important;
+      }
+      
+      .qusetionLink{
+            font-size:1.05em;
+            background-color: #ffc300;
+            color: white;
+            border: none;
+            width: 16.3rem;
+            text-decoration: none;
+            border-radius: 10rem;
+      height: 5.2rem; 
+      display: block;
+      line-height: 4.5rem;
+      margin: auto;
+      }
 }

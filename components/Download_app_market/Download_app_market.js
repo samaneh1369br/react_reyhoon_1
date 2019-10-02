@@ -26,17 +26,17 @@ const DownloadAppMarketData=[
 function renderDownloadAppMarket(){
    const DownloadAppMarketRendered=DownloadAppMarketData.map(
         (imagex)=>
-        <a href={imagex.hrefTag} key={imagex.id}>
-        <img  title={imagex.title} src={`${imagex.image}`} alt={imagex.title}/>
+        <a className="marketLink" href={imagex.hrefTag} key={imagex.id}>
+        <img  className="marketImage" title={imagex.title} src={`${imagex.image}`} alt={imagex.title}/>
         </a>
     )
     return DownloadAppMarketRendered;
 }
 const DownloadAppMarket=()=>{
     return(
-    <div class="a-in-app-flex">
-        {renderDownloadAppMarket()}
-    </div>
+        <div className="a-in-app-flex">
+            {renderDownloadAppMarket()}
+        </div>
     )
 }
 export default DownloadAppMarket;

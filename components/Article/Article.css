@@ -1,5 +1,4 @@
 @media  (min-width:320px) {
-
         .article{
             width:90%;
             margin: auto;
@@ -23,7 +22,6 @@
             font-size: 2rem;
             line-height: 3.7rem;
             color:#4a4a4a;
-
         }
 
         .article p{
@@ -34,11 +32,9 @@
 
         .article div:last-child{
             border-bottom: none;
-
         }
 }
 @media (min-width:1025px){
-
         .article.article{
             width:120rem;
             margin: auto;
@@ -47,12 +43,10 @@
 
         .article div{
             text-align: start;
-
         }
 
         .article h1{
             font-size: 3rem;
             line-height: 5rem;
-
         }
 }

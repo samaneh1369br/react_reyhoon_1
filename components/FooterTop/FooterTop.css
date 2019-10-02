@@ -1,66 +1,144 @@
-.footer-top{
-    width:140rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    margin: auto;
-}
-  
- .footer-top div{
-    list-style-type: none;
-    border-top:3px solid transparent;
-    margin: 45px 15px ;
-    padding: 15px;
-    min-width: 20rem;
-    width: auto;
-     text-align: right; 
-    flex-basis: 15rem;
-} 
-.footer-top> p{
-    border-top:3px solid transparent;
-    padding: 60px 10px;
-    margin: 30px 15px ;
-    font-size: 1.4rem;
-    flex-basis: 30rem;
-}
-.items-footer{
-    list-style-type: none;
-    text-align: right;
-    margin: 0;
-    padding: 0
-}
-.footer-top div p{
-    color: white;
-    margin:15px 0 30px 0 !important;
+@media  (min-width:320px) {
+    .footer-top{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: auto;
+    }
     
+    .footer-top div{
+        list-style-type: none;
+        border-top:3px solid transparent;
+        margin: 45px 20% ;
+        width: 60%;
+        text-align: center; 
+    } 
+    .footer-top> p{
+        padding: 0 20%;
+        border-top:3px solid transparent;
+        padding: 60px 10px;
+        margin: 30px auto ;
+        font-size: 1.4rem;
+        width: 60%;
+        text-align: center; 
+
+    }
+    .items-footer{
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        WIDTH:100%;
+    }
+    .footer-top div p{
+        color: white;
+        margin:15px 0 30px 0 !important;
+        
+
+    }
+    .items-footer li{
+        padding: 0;
+        margin:15px 0;
+        font-size: 1.4rem;
+
+    }
+    .items-footer a{
+        text-decoration: none;
+        color: #9b9b9b;
+    }
+    .a_button_footer{ 
+    border: 1px solid #9b9b9b;
+    width: 13rem;
+    display: block;
+    border-radius: 7px;
+    padding: 3px;
+    height: 4rem;
+    margin: 7px;
+    box-sizing: border-box;
+    }
+    .a_button_footer img{
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+    }
+    .li_button_footer.li_button_footer {
+        margin: 7px 0;
+        padding: 0
+    }
+}
+
+@media   (min-width:769px) {
+    .footer-top{
+        width:140rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin: auto;
+    }
+      
+     .footer-top div{
+        list-style-type: none;
+        border-top:3px solid transparent;
+        margin: 45px 15px ;
+        padding: 15px;
+        min-width: 20rem;
+        width: auto;
+         text-align: right; 
+        flex-basis: 15rem;
+    } 
+    .footer-top> p{
+        border-top:3px solid transparent;
+        padding: 60px 10px;
+        margin: 30px 15px ;
+        font-size: 1.4rem;
+        flex-basis: 30rem;
+    }
+    .items-footer{
+        list-style-type: none;
+        text-align: right;
+        margin: 0;
+        padding: 0
+    }
+    .footer-top div p{
+        color: white;
+        margin:15px 0 30px 0 !important;
+        
+    
+    }
+    .items-footer li{
+        padding: 0;
+        margin:15px 0;
+        font-size: 1.4rem;
+    
+    }
+    .items-footer a{
+        text-decoration: none;
+        color: #9b9b9b;
+    }
+    .a_button_footer{ 
+      border: 1px solid #9b9b9b;
+      width: 13rem;
+      display: block;
+      border-radius: 7px;
+      padding: 3px;
+      height: 4rem;
+      margin: 7px;
+      box-sizing: border-box;
+    }
+    .a_button_footer img{
+        max-width: 100%;
+        max-height: 100%;
+        
+    }
+    .li_button_footer.li_button_footer {
+        margin: 7px 0;
+        padding: 0
+    }
+    
+}
+@media   (min-width:1281px){
 
 }
-.items-footer li{
-    padding: 0;
-    margin:15px 0;
-    font-size: 1.4rem;
 
-}
-.items-footer a{
-    text-decoration: none;
-    color: #9b9b9b;
-}
-.a_button_footer{ 
-  border: 1px solid #9b9b9b;
-  width: 13rem;
-  display: block;
-  border-radius: 7px;
-  padding: 3px;
-  height: 4rem;
-  margin: 7px;
-  box-sizing: border-box;
-}
-.a_button_footer img{
-    max-width: 100%;
-    max-height: 100%;
-    
-}
-.li_button_footer.li_button_footer {
-    margin: 7px 0;
-    padding: 0
-}
+
+

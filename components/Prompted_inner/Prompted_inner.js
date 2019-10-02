@@ -79,8 +79,11 @@ const PromptedInnerData=[
 function renderPromptedInner(){
         const promptedInnerRendered=PromptedInnerData.map(
                 (logo)=> <div key={logo.id}>
-                                <img  src={`${logo.image}`} alt={logo.alterText} />
-                                <p>{logo.title}</p>
+                                <a className="promptedLink" href="#">
+                                        <img className="promptedLinkImage" src={`${logo.image}`} alt={logo.alterText} />
+                                        <p>{logo.title}</p>
+                                </a>
+
                          </div>
                 
               
@@ -100,10 +103,7 @@ function renderPromptedInner(){
     return(
     <div className="good-resturant-flex">
                 <h1>رستوران‌های خوب تهران در ریحون</h1>
-
-                  {renderPromptedInner()}
-
-                
+                {renderPromptedInner()}
     </div>
     )
 }

@@ -176,7 +176,7 @@ function renderArticleData() {
 
 const Article = () => {
   return __jsx("article", {
-    class: "article margin-v-45",
+    className: "article margin-v-45",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -274,10 +274,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Banner_form.css */ "./components/Banner_form/Banner_form.css");
 /* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Banner_form_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Svg_search/Svg_search */ "./components/Svg_search/Svg_search.js");
 
 var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Banner_form\\Banner_form.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
@@ -285,9 +287,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     super();
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "submit", e => {
-      e.preventDefault(); // console.log()
-      // console.log(e.target.querySelector("input[id='txt2']").value)
-
+      e.preventDefault();
       e.target.querySelector("input[id='txt1']").value && e.target.querySelector("input[id='txt2']").value ? this.setState({
         city: e.target.querySelector("input[id='txt1']").value + " . ",
         address: e.target.querySelector("input[id='txt2']").value
@@ -313,13 +313,13 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "header-form-section margin-v-60",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 28
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 29
       },
       __self: this
     }, "\u0628\u0631\u0627\u06CC \u062F\u06CC\u062F\u0646 \u0644\u06CC\u0633\u062A \u0631\u0633\u062A\u0648\u0631\u0627\u0646\u200C\u0647\u0627 \u0648 \u0641\u0633\u062A\u200C\u0641\u0648\u062F\u200C\u0647\u0627\u06CC\u06CC \u06A9\u0647 \u0628\u0647 \u0634\u0645\u0627 \u0633\u0631\u0648\u06CC\u0633 \u0645\u06CC\u200C\u062F\u0647\u0646\u062F\u060C \u0645\u0646\u0637\u0642\u0647 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F."), __jsx("form", {
@@ -327,7 +327,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "header-form",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 30
       },
       __self: this
     }, __jsx("input", {
@@ -337,21 +337,21 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       placeholder: "\u062A\u0647\u0631\u0627\u0646",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 31
       },
       __self: this
     }), __jsx("div", {
       className: "child-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 32
       },
       __self: this
     }, __jsx("span", {
       className: "child-2-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 33
       },
       __self: this
     }, "\xA9"), __jsx("input", {
@@ -361,7 +361,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       placeholder: "\u0645\u062B\u0644\u0627 \u0646\u06CC\u0627\u0648\u0631\u0627\u0646",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 34
       },
       __self: this
     })), __jsx("button", {
@@ -369,73 +369,19 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 36
       },
       __self: this
-    }, " ", __jsx("svg", {
-      className: "search-svg",
-      xmlns: "http://www.w3.org/2000/svg",
-      width: "18",
-      height: "18",
-      viewBox: "0 0 18 18",
+    }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 37
       },
       __self: this
-    }, __jsx("g", {
-      fill: "none",
-      "fill-rule": "evenodd",
+    }))), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }, __jsx("path", {
-      d: "M0 0h18v18H0z",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }), __jsx("g", {
-      stroke: "currentColor",
-      "stroke-linecap": "round",
-      "stroke-linejoin": "round",
-      "stroke-width": "2",
-      transform: "translate(2 2)",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }, __jsx("circle", {
-      cx: "6.125",
-      cy: "6.125",
-      r: "6.125",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }), __jsx("path", {
-      d: "M13.373 13.373l-2.767-2.767",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    })), __jsx("path", {
-      d: "M0 0h18v18H0z",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }))))), __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 41
       },
       __self: this
     }, this.state.city, this.state.address));
@@ -589,7 +535,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const BgDiagonal = () => {
   return __jsx("section", {
-    class: "bg-diagonal margin-v-30",
+    className: "bg-diagonal margin-v-30",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -644,17 +590,7 @@ class BranchCard extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     this.state = {
       dataResturant: []
     };
-  } // createBranchCard=(n)=>{
-  //         let i=0;
-  //         let array=[];
-  //         while(i<n){
-  //             let el=<BranchCardInner ind={i}/>;
-  //                 array.push(el);
-  //                 i++;
-  //             }
-  //             return(array);
-  // }
-
+  }
 
   componentDidMount() {
     this.setState({
@@ -666,13 +602,13 @@ class BranchCard extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 18
       },
       __self: this
     }, __jsx(_Best_resturant_in_day_heading_Best_resturant_in_day_heading__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 19
       },
       __self: this
     }), __jsx("section", {
@@ -682,81 +618,82 @@ class BranchCard extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
       className: "container-flex row-direction phablet-only-max container-width",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 20
       },
       __self: this
     }, this.state.dataResturant.map((item, index) => {
       return __jsx("div", {
+        key: index,
         className: "resturant-flex column-direction flex-evenly",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 25
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 26
         },
         __self: this
       }, __jsx("img", {
         src: item.image,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 27
         },
         __self: this
       })), __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 29
         },
         __self: this
       }, item.name), __jsx("div", {
         className: "div_flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 30
         },
         __self: this
       }, __jsx("span", {
         className: "gold",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 31
         },
         __self: this
       }, item.voteNumber), __jsx(_Star_rating_Star_rating__WEBPACK_IMPORTED_MODULE_3__["default"], {
         rating: item.rateAverage,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 32
         },
         __self: this
       }), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 33
         },
         __self: this
       }, "(", item.rateAverage, ")")), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 35
         },
         __self: this
       }, item.description), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 36
         },
         __self: this
       }, item.address), __jsx("a", {
         href: "#",
-        className: "btn btn-in-box",
+        className: "btn-in-box",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 37
         },
         __self: this
       }, "\u0634\u0631\u0648\u0639 \u0633\u0641\u0627\u0631\u0634"));
@@ -833,29 +770,34 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const CuisinesData = [{
   food: "کباب",
   imageSrc: "https://dist.reyhoon-static.com/uploads/images/cuisines/kebab_1525012065.jpeg@!cuisine_card",
-  activeNumber: 1836
+  activeNumber: 1836,
+  id: 0
 }, {
   food: "پیتزا",
   imageSrc: "https://dist.reyhoon-static.com/uploads/images/cuisines/pizza_1539780235.jpeg@!cuisine_card",
-  activeNumber: 1836
+  activeNumber: 1836,
+  id: 1
 }, {
   food: "برگر",
   imageSrc: "https://dist.reyhoon-static.com/uploads/images/cuisines/hamburger_1539779150.jpeg@!cuisine_card",
-  activeNumber: 1836
+  activeNumber: 1836,
+  id: 2
 }, {
   food: "ساندویچ",
   imageSrc: "https://dist.reyhoon-static.com/uploads/images/cuisines/sandwich_1539782856.jpeg@!cuisine_card",
-  activeNumber: 1836
+  activeNumber: 1836,
+  id: 3
 }];
 
 function renderCuisinesCard() {
   const CuisinesCardRendered = CuisinesData.map(card => __jsx(_Cuisines_inner_Cuisines_inner__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: card.id,
     typeFood: card.food,
     image: `${card.imageSrc}`,
     activeNumber: card.activeNumber,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 30
     },
     __self: this
   }));
@@ -866,13 +808,13 @@ const CuisinesCard = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx(_Cuisines_header_Cuisines_header__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 38
     },
     __self: undefined
   }), __jsx("section", {
@@ -882,7 +824,7 @@ const CuisinesCard = () => {
     className: "container-flex img-box-flex container-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 39
     },
     __self: undefined
   }, renderCuisinesCard()));
@@ -929,25 +871,36 @@ const CuisinesHeader = () => {
     className: "which-food",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
   }, "\u063A\u0630\u0627 \u0686\u0647 \u0645\u06CC\u0644 \u062F\u0627\u0631\u06CC\u062F?"), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: undefined
   }, "\u0635\u0628\u062D\u0627\u0646\u0647\u060C \u0646\u0627\u0647\u0627\u0631\u060C \u0634\u0627\u0645 \u06CC\u0627 \u0647\u0631 \u0686\u06CC\u0632\u06CC \u06A9\u0647 \u0645\u06CC\u0644 \u062F\u0627\u0631\u06CC\u062F \u0631\u0627 \u0627\u0646\u062A\u062E\u0627\u0628 \u06A9\u0646\u06CC\u062F"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CuisinesHeader);
+
+/***/ }),
+
+/***/ "./components/Cuisines_inner/Cuisines_inner.css":
+/*!******************************************************!*\
+  !*** ./components/Cuisines_inner/Cuisines_inner.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -962,9 +915,12 @@ const CuisinesHeader = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Cuisines_inner_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cuisines_inner.css */ "./components/Cuisines_inner/Cuisines_inner.css");
+/* harmony import */ var _Cuisines_inner_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Cuisines_inner_css__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Cuisines_inner\\Cuisines_inner.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 function CuisinesInner(props) {
   return __jsx("div", {
@@ -974,22 +930,37 @@ function CuisinesInner(props) {
     },
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "foodLink",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, __jsx("h1", {
+  }, __jsx("div", {
+    className: "foodText",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, props.typeFood), __jsx("h4", {
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, "\u0631\u0633\u062A\u0648\u0631\u0627\u0646 \u0641\u0639\u0627\u0644", props.activeNumber));
+  }, props.typeFood), __jsx("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "\u0631\u0633\u062A\u0648\u0631\u0627\u0646 \u0641\u0639\u0627\u0644", props.activeNumber))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (CuisinesInner);
@@ -1034,76 +1005,76 @@ const DownloadApp = () => {
     className: "app margin-v-15",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: undefined
   }, __jsx("div", {
     className: "app-flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: undefined
   }, __jsx("div", {
     className: "app-flex-comment",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     },
     __self: undefined
   }, __jsx("h1", {
     className: "app-h-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: undefined
   }, "\u0631\u06CC\u062D\u0648\u0646 \u0631\u0648\u06CC \u0645\u0648\u0628\u0627\u06CC\u0644"), __jsx("p", {
     className: "app-comment-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: undefined
   }, "\u0628\u0631\u0627\u06CC \u062F\u0631\u06CC\u0627\u0641\u062A \u0644\u06CC\u0646\u06A9 \u062F\u0627\u0646\u0644\u0648\u062F \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646 \u0631\u06CC\u062D\u0648\u0646\u060C \u0634\u0645\u0627\u0631\u0647 \u0645\u0648\u0628\u0627\u06CC\u0644 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F.")), __jsx(_Download_app_form_Download_app_form__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: undefined
   }), __jsx(_Download_app_market_Download_app_market__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     },
     __self: undefined
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     },
     __self: undefined
   }, __jsx("p", {
     className: "app-comment-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 15
     },
     __self: undefined
-  }, "\u0627\u06CC\u0646 \u0641\u0648\u0631\u0645 \u062A\u0648\u0633\u0637 reCAPTCHA \u0645\u062D\u0627\u0641\u0638\u062A \u0634\u062F\u0647 \u0648\u0633\u06CC\u0627\u0633\u06CC\u062A \u062D\u0641\u0638 ", __jsx("a", {
+  }, "\u0627\u06CC\u0646 \u0641\u0648\u0631\u0645 \u062A\u0648\u0633\u0637 reCAPTCHA \u0645\u062D\u0627\u0641\u0638\u062A \u0634\u062F\u0647 \u0648\u0633\u06CC\u0627\u0633\u06CC\u062A \u062D\u0641\u0638", __jsx("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: undefined
-  }, " \u062D\u0631\u06CC\u0645 \u062E\u0635\u0648\u0635\u06CC "), "\u0648\u0642\u0648\u0627\u0646\u06CC\u0646 \u0633\u0631\u0648\u06CC\u0633 \u06AF\u0648\u06AF\u0644 \u0628\u0631 \u0631\u0648\u06CC \u0622\u0646 \u0627\u0639\u0645\u0627\u0644 \u0645\u06CC\u200C\u0634\u0648\u062F."))), __jsx("img", {
+  }, "\u062D\u0631\u06CC\u0645 \u062E\u0635\u0648\u0635\u06CC"), "\u0648\u0642\u0648\u0627\u0646\u06CC\u0646 \u0633\u0631\u0648\u06CC\u0633 \u06AF\u0648\u06AF\u0644 \u0628\u0631 \u0631\u0648\u06CC \u0622\u0646 \u0627\u0639\u0645\u0627\u0644 \u0645\u06CC\u200C\u0634\u0648\u062F."))), __jsx("img", {
     className: "mobile-image",
     src: "https://www.reyhoon.com/react-assets/dist/ca98ff0d.png?__WB_REVISION__=ca98ff0d0c7e3808157aa48c94953a75",
     alt: "\u0627\u067E \u0631\u06CC\u062D\u0648\u0646 \u0631\u0627 \u062F\u0627\u0646\u0644\u0648\u062F \u06A9\u0646\u06CC\u062F",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: undefined
   }));
@@ -1163,11 +1134,11 @@ class DownloadAppForm extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compo
 
   render() {
     return __jsx("form", {
-      class: "app-flex-form",
+      className: "app-flex-form",
       onSubmit: this.handelSubmit,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 16
       },
       __self: this
     }, __jsx("input", {
@@ -1176,7 +1147,7 @@ class DownloadAppForm extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compo
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 17
       },
       __self: this
     }), __jsx("button", {
@@ -1184,14 +1155,14 @@ class DownloadAppForm extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compo
       value: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 18
       },
       __self: this
     }, "\u062F\u0631\u06CC\u0627\u0641\u062A \u0644\u06CC\u0646\u06A9 \u0627\u0632 \u0637\u0631\u06CC\u0642 sms"), __jsx("p", {
-      class: "app-comment-2",
+      className: "app-comment-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 20
       },
       __self: this
     }, "\u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646 \u0631\u06CC\u062D\u0648\u0646 \u0628\u0631\u0627\u06CC Android \u0648 iOS \u062F\u0631 \u062F\u0633\u062A\u0631\u0633 \u0627\u0633\u062A."));
@@ -1260,6 +1231,7 @@ const DownloadAppMarketData = [{
 
 function renderDownloadAppMarket() {
   const DownloadAppMarketRendered = DownloadAppMarketData.map(imagex => __jsx("a", {
+    className: "marketLink",
     href: imagex.hrefTag,
     key: imagex.id,
     __source: {
@@ -1268,6 +1240,7 @@ function renderDownloadAppMarket() {
     },
     __self: this
   }, __jsx("img", {
+    className: "marketImage",
     title: imagex.title,
     src: `${imagex.image}`,
     alt: imagex.title,
@@ -1282,7 +1255,7 @@ function renderDownloadAppMarket() {
 
 const DownloadAppMarket = () => {
   return __jsx("div", {
-    class: "a-in-app-flex",
+    className: "a-in-app-flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
@@ -1409,51 +1382,57 @@ const SvgComponentData = [{
     },
     __self: undefined
   }),
-  href: ""
+  href: "",
+  id: 0
 }, {
   icon: __jsx(_Svg_instagram_Svg_instagram__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: undefined
   }),
-  href: ""
+  href: "",
+  id: 1
 }, {
   icon: __jsx(_Svg_google_Svg_google__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: undefined
   }),
-  href: ""
+  href: "",
+  id: 2
 }, {
   icon: __jsx(_Svg_twitter_Svg_twitter__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: undefined
   }),
-  href: ""
+  href: "",
+  id: 3
 }, {
   icon: __jsx(_Svg_telegram_Svg_telegram__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: undefined
   }),
-  href: ""
+  href: "",
+  id: 4
 }];
 
 const SvgComponentRender = () => {
   const RenderedSvgComponent = SvgComponentData.map(icon => __jsx("a", {
+    key: icon.id,
     href: icon.href,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: undefined
   }, icon.icon));
@@ -1462,31 +1441,31 @@ const SvgComponentRender = () => {
 
 const FooterBottom = () => {
   return __jsx("div", {
-    class: "footer-bottom",
+    className: "footer-bottom",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("div", {
-    class: "margin-v-15",
+    className: "margin-v-15",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 44
     },
     __self: undefined
   }, SvgComponentRender()), __jsx("div", {
-    class: "margin-v-15",
+    className: "margin-v-15",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 47
     },
     __self: undefined
   }, "\xA9 2017, ", __jsx("a", {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 48
     },
     __self: undefined
   }, "Reyhoon"), ", All Rights Reserved."));
@@ -1537,7 +1516,7 @@ const FooterMiddleData = [{
 
 const FooterMiddleRender = () => {
   const RenderedFooterMiddle = FooterMiddleData.map(image => __jsx("img", {
-    id: image.id,
+    key: image.id,
     src: image.source,
     __source: {
       fileName: _jsxFileName,
@@ -1550,7 +1529,7 @@ const FooterMiddleRender = () => {
 
 const FooterMiddle = () => {
   return __jsx("div", {
-    class: "footer-middle",
+    className: "footer-middle",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -1613,7 +1592,7 @@ const FooterTopData = [{
   color: "#d40062",
   sectionTitle: 'رستوران ها',
   links: [{
-    id: 1,
+    id: 4,
     title: 'ثبت رستوران',
     href: '#'
   }]
@@ -1622,15 +1601,15 @@ const FooterTopData = [{
   color: "#ff0613",
   sectionTitle: 'پشتیبانی ریحون',
   links: [{
-    id: 1,
+    id: 5,
     title: 'سوالات متداول',
     href: '#'
   }, {
-    id: 2,
+    id: 6,
     title: 'تماس با پشتیبانی',
     href: '#'
   }, {
-    id: 3,
+    id: 7,
     title: 'قوانین و مقررات',
     href: '#'
   }]
@@ -1641,22 +1620,22 @@ const FooterTopData = [{
   items: [{
     src: "https://dist.reyhoon-static.com/web-assets/images/app-links/google-play-dark.png?x-oss-process=image/resize,w_180",
     href: "https://play.google.com/store/apps/details?id=reyhoon.androidapp",
-    id: 1
+    id: 8
   }, {
     src: "https://dist.reyhoon-static.com/web-assets/images/app-links/sib-app-dark.png?x-oss-process=image/resize,w_180",
     href: "https://sibapp.com/applications/reyhoon",
-    id: 2
+    id: 9
   }, {
     src: "https://dist.reyhoon-static.com/web-assets/images/app-links/cafebazaar-dark.png?x-oss-process=image/resize,w_180",
     href: "https://cafebazaar.ir/app/reyhoon.androidapp/?l=fa",
-    id: 3
+    id: 10
   }]
 }];
 
 function renderFooter() {
-  const renderdata = FooterTopData.map(item => {
+  const renderdata = FooterTopData.map((item, index) => {
     return __jsx("div", {
-      key: item.id,
+      key: index,
       style: {
         borderTop: `3px solid ${item.color}`
       },
@@ -1678,7 +1657,8 @@ function renderFooter() {
         lineNumber: 89
       },
       __self: this
-    }, item.links ? item.links.map(link => __jsx("li", {
+    }, item.links ? item.links.map((link, index) => __jsx("li", {
+      key: index,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 95
@@ -1701,7 +1681,7 @@ function renderFooter() {
       __self: this
     }, __jsx("a", {
       href: link.href,
-      class: "a_button_footer",
+      className: "a_button_footer",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 101
@@ -1721,7 +1701,7 @@ function renderFooter() {
 
 const FooterTop = () => {
   return __jsx("div", {
-    class: "footer-top",
+    className: "footer-top",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 119
@@ -1827,7 +1807,14 @@ const Header = () => {
       lineNumber: 14
     },
     __self: undefined
-  }, "\u0631\u0627\u0647\u0646\u0645\u0627")), __jsx("ul", {
+  }, __jsx("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, "\u0631\u0627\u0647\u0646\u0645\u0627"))), __jsx("ul", {
     className: "login",
     __source: {
       fileName: _jsxFileName,
@@ -1840,7 +1827,14 @@ const Header = () => {
       lineNumber: 17
     },
     __self: undefined
-  }, "\u0639\u0636\u0648\u06CC\u062A"), __jsx("li", {
+  }, __jsx("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "\u0639\u0636\u0648\u06CC\u062A")), __jsx("li", {
     className: "dash",
     __source: {
       fileName: _jsxFileName,
@@ -1853,7 +1847,14 @@ const Header = () => {
       lineNumber: 19
     },
     __self: undefined
-  }, "\u0648\u0631\u0648\u062F"))))), __jsx("div", {
+  }, __jsx("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, "\u0648\u0631\u0648\u062F")))))), __jsx("div", {
     className: "horizontal-line",
     __source: {
       fileName: _jsxFileName,
@@ -1902,33 +1903,33 @@ const PromptedBox = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
   }, __jsx("section", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: undefined
   }, __jsx("div", {
     className: "section-bg margin-v-45",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 7
     },
     __self: undefined
   }, __jsx("div", {
     className: "good-resturant",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 8
     },
     __self: undefined
   }, __jsx(_Prompted_inner_Prompted_inner__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 9
     },
     __self: undefined
   })))));
@@ -2036,21 +2037,30 @@ function renderPromptedInner() {
       lineNumber: 81
     },
     __self: this
-  }, __jsx("img", {
-    src: `${logo.image}`,
-    alt: logo.alterText,
+  }, __jsx("a", {
+    className: "promptedLink",
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 82
     },
     __self: this
-  }), __jsx("p", {
+  }, __jsx("img", {
+    className: "promptedLinkImage",
+    src: `${logo.image}`,
+    alt: logo.alterText,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83
     },
     __self: this
-  }, logo.title)));
+  }), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, logo.title))));
   return promptedInnerRendered;
 }
 
@@ -2059,13 +2069,13 @@ const PromptedInner = () => {
     className: "good-resturant-flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 104
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 105
     },
     __self: undefined
   }, "\u0631\u0633\u062A\u0648\u0631\u0627\u0646\u200C\u0647\u0627\u06CC \u062E\u0648\u0628 \u062A\u0647\u0631\u0627\u0646 \u062F\u0631 \u0631\u06CC\u062D\u0648\u0646"), renderPromptedInner());
@@ -2109,20 +2119,22 @@ function Question() {
     className: "any-question margin-v-30",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 4
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 5
     },
     __self: this
-  }, "\u0622\u06CC\u0627 \u0633\u0648\u0627\u0644 \u0628\u06CC\u0634\u062A\u0631\u06CC \u062F\u0627\u0631\u06CC\u062F\u061F"), __jsx("button", {
-    className: "btn-in-box btn-in-box",
+  }, "\u0622\u06CC\u0627 \u0633\u0648\u0627\u0644 \u0628\u06CC\u0634\u062A\u0631\u06CC \u062F\u0627\u0631\u06CC\u062F\u061F"), __jsx("a", {
+    className: "qusetionLink",
+    href: "https://www.manesht.com",
+    target: "_blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 6
     },
     __self: this
   }, "\u0631\u0627\u0647\u0646\u0645\u0627"));
@@ -2160,22 +2172,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Svg_spoon_and_fork_Svg_spoon_and_fork__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Svg_spoon_and_fork/Svg_spoon_and_fork */ "./components/Svg_spoon_and_fork/Svg_spoon_and_fork.js");
 var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Show_case\\Show_case.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-// import React from "react";
-// import ShowCaseInner from "../Show_case_inner/Show_case_inner"
-// import "./Show_case.css"
-// import SvgHeart from "../Svg_heart/Svg_heart"
-// import SvgLocation from "../Svg_location/Svg_location"
-// import SvgSpoonAndFork from "../Svg_spoon_and_fork/Svg_spoon_and_fork"
-// const ShowCase=()=>{
-// return(
-//     <section className="container-flex row-direction flex-around  container-width"> 
-//         <ShowCaseInner heading="غذایتان را نوش‌جان کنید" comment="درب منزل یا حضوری از خود رستوران سفارشتان را تحویل بگیرید." children={<SvgHeart/>}/>
-//         <ShowCaseInner heading="غذای خود را انتخاب کنید" comment="غذایی که می‌خواهید را انتخاب کنید و بدون هزینه اضافی سفارش خود را ثبت کنید." children={<SvgSpoonAndFork/>} />
-//         <ShowCaseInner heading="شهر و منطقه خود را وارد کنید" comment="منوی مورد علاقه خود را از بین بیش از 4000 رستوران خوب در تهران و شهرستان‌ها جستجو کنید." children={<SvgLocation/>} />
-//         </section> 
-// )
-// }
-// export default ShowCase;
 
 
 
@@ -2188,7 +2184,7 @@ const showCaseData = [{
   icon: __jsx(_Svg_heart_Svg_heart__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 12
     },
     __self: undefined
   }),
@@ -2199,7 +2195,7 @@ const showCaseData = [{
   icon: __jsx(_Svg_location_Svg_location__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 19
     },
     __self: undefined
   }),
@@ -2210,7 +2206,7 @@ const showCaseData = [{
   icon: __jsx(_Svg_spoon_and_fork_Svg_spoon_and_fork__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 25
     },
     __self: undefined
   }),
@@ -2225,7 +2221,7 @@ function renderShowcaseCard() {
     children: card.icon,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 32
     },
     __self: this
   }));
@@ -2240,7 +2236,7 @@ const ShowCase = () => {
     className: "container-flex row-direction flex-around  container-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 40
     },
     __self: undefined
   }, renderShowcaseCard());
@@ -2277,45 +2273,34 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Show_case_inner\\Show_case_inner.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
- // class ShowCaseInner extends Component{
-//     render(){
-//         return(
-//                 <div class="box-flex column-direction flex-around margin-v-15">
-//                         <div></div>
-//                         <h2>{this.props.heading}</h2>
-//                         <p>{this.props.comment}</p>
-//                 </div>
-//         )
-//     }
-// }
-// export default ShowCaseInner;
+
 
 function ShowCaseInner(props) {
   return __jsx("div", {
     className: "box-flex column-direction flex-around margin-v-15",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 4
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 5
     },
     __self: this
   }, props.children), __jsx("h2", {
     className: "box-flex-h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 6
     },
     __self: this
   }, props.heading), __jsx("p", {
     className: "box-flex-p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 7
     },
     __self: this
   }, props.comment));
@@ -2373,7 +2358,7 @@ class StarRating extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18
+            lineNumber: 15
           },
           __self: this
         });
@@ -2389,7 +2374,7 @@ class StarRating extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
             key: index,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 25
+              lineNumber: 23
             },
             __self: this
           });
@@ -2410,15 +2395,14 @@ class StarRating extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     this.setState({
       rating: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(this.props.rating)
     });
-  } // React lifecycle ro bekhoon ye chizi be naame componentDidMount hast ke daghighan kaaresh hamine ke mikhaay
-
+  }
 
   render() {
     return __jsx("div", {
       className: "parent",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 39
       },
       __self: this
     }, this.renderStars(this.state.numberStars));
@@ -2452,7 +2436,7 @@ const SvgFacebook = () => {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18",
     xmlnsXlink: "http://www.w3.org/1999/xlink",
-    "enable-background": "new 0 0 409.221 409.221",
+    enableBackground: "new 0 0 409.221 409.221",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -2460,7 +2444,7 @@ const SvgFacebook = () => {
     __self: undefined
   }, __jsx("g", {
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -2575,13 +2559,13 @@ const SvgHeart = () => {
     viewBox: "0 0 100 100",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 4
     },
     __self: undefined
   }, __jsx("defs", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
   }, __jsx("linearGradient", {
@@ -2593,40 +2577,40 @@ const SvgHeart = () => {
     gradientUnits: "userSpaceOnUse",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: undefined
   }, __jsx("stop", {
-    "stop-color": "#8B00AF",
+    stopColor: "#8B00AF",
     offset: "0%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#D40062",
+    stopColor: "#D40062",
     offset: "90%",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }), __jsx("stop", {
+    stopColor: "#FF0613",
+    offset: "100%",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: undefined
-  }), __jsx("stop", {
-    "stop-color": "#FF0613",
-    offset: "100%",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
   }))), __jsx("path", {
     fill: "url(#linearGradientHeart)",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     d: "M91.235 15.973a25.732 25.732 0 0 0-18.353-8.8A35.802 35.802 0 0 0 50 18.261 35.861 35.861 0 0 0 27.059 7.232a25.438 25.438 0 0 0-18.294 8.741c-11.662 11.77-11.662 30.706 0 42.475 19.764 17.893 30.059 27.28 35.294 32.09a8.723 8.723 0 0 0 11.765 0l35.294-32.09c11.694-11.737 11.747-30.673.117-42.475zM86.53 53.58C71.647 67.248 62.176 75.813 56.118 81.328l-4.647 4.224c-.765.7-1.941.7-2.706 0-5.412-4.81-15.647-14.139-35.294-31.973-8.968-9.125-8.968-23.729 0-32.854a18.9 18.9 0 0 1 13.588-6.746 29.44 29.44 0 0 1 18.412 9.269L50 27.355l4.588-4.107a29.026 29.026 0 0 1 18.294-9.328 19.194 19.194 0 0 1 13.53 6.805c9 9.093 9.053 23.697.117 32.854z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 15
     },
     __self: undefined
   }));
@@ -2660,7 +2644,7 @@ const SvgInstagram = () => {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18",
     xmlnsXlink: "http://www.w3.org/1999/xlink",
-    "enable-background": "new 0 0 409.221 409.221",
+    enableBackground: "new 0 0 409.221 409.221",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -2741,7 +2725,7 @@ const SvgLocation = () => {
     },
     __self: undefined
   }, __jsx("stop", {
-    "stop-color": "#8B00AF",
+    stopColor: "#8B00AF",
     offset: "0%",
     __source: {
       fileName: _jsxFileName,
@@ -2749,7 +2733,7 @@ const SvgLocation = () => {
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#D40062",
+    stopColor: "#D40062",
     offset: "90%",
     __source: {
       fileName: _jsxFileName,
@@ -2757,20 +2741,20 @@ const SvgLocation = () => {
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#FF0613",
+    stopColor: "#FF0613",
     offset: "100%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: undefined
   }))), __jsx("path", {
     fill: "url(#linearGradientPin)",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     d: "M50 0c23.488-.229 42.74 18.627 43.061 42.176 0 35-39.834 56.53-41.477 57.412a3.278 3.278 0 0 1-3.168 0c-1.643-.882-41.477-22.412-41.477-57.412C7.26 18.626 26.512-.229 50 0zm0 92.824c7.157-4.236 36.373-23.295 36.373-50.648C85.956 22.4 69.727 6.652 50 6.882 30.273 6.652 14.044 22.4 13.627 42.176c0 27.118 29.216 46.412 36.373 50.648zm.176-66.177c9.179.032 16.603 7.502 16.603 16.706a16.706 16.706 0 0 1-10.3 15.44 16.629 16.629 0 0 1-18.164-3.648 16.739 16.739 0 0 1-3.574-18.226 16.66 16.66 0 0 1 15.435-10.272zm0 26.706c5.508 0 9.973-4.477 9.973-10s-4.465-10-9.973-10c-5.508 0-9.973 4.477-9.973 10s4.465 10 9.973 10z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 14
     },
     __self: undefined
   }));
@@ -2824,7 +2808,7 @@ const SvgLogo = () => {
     },
     __self: undefined
   }, __jsx("stop", {
-    "stop-color": "#FF0613",
+    stopColor: "#FF0613",
     offset: "0%",
     __source: {
       fileName: _jsxFileName,
@@ -2832,7 +2816,7 @@ const SvgLogo = () => {
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#D40062",
+    stopColor: "#D40062",
     offset: "50.55%",
     __source: {
       fileName: _jsxFileName,
@@ -2840,7 +2824,7 @@ const SvgLogo = () => {
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#8B00AF",
+    stopColor: "#8B00AF",
     offset: "100%",
     __source: {
       fileName: _jsxFileName,
@@ -2850,9 +2834,9 @@ const SvgLogo = () => {
   }))), __jsx("g", {
     id: "Logo/Logo-Typeface",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -2870,7 +2854,7 @@ const SvgLogo = () => {
     id: "Reyhoon-logo2-01",
     transform: "translate(62.000000, 17.000000)",
     fill: "#000000",
-    "fill-rule": "nonzero",
+    fillRule: "nonzero",
     className: "",
     __source: {
       fileName: _jsxFileName,
@@ -2956,6 +2940,101 @@ const SvgLogo = () => {
 
 /***/ }),
 
+/***/ "./components/Svg_search/Svg_search.css":
+/*!**********************************************!*\
+  !*** ./components/Svg_search/Svg_search.css ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/Svg_search/Svg_search.js":
+/*!*********************************************!*\
+  !*** ./components/Svg_search/Svg_search.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Svg_search_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Svg_search.css */ "./components/Svg_search/Svg_search.css");
+/* harmony import */ var _Svg_search_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Svg_search_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Svg_search\\Svg_search.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const SvgSearch = () => __jsx("svg", {
+  className: "search-svg",
+  xmlns: "http://www.w3.org/2000/svg",
+  width: "18",
+  height: "18",
+  viewBox: "0 0 18 18",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 3
+  },
+  __self: undefined
+}, __jsx("g", {
+  fill: "none",
+  fillRule: "evenodd",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 4
+  },
+  __self: undefined
+}, __jsx("path", {
+  d: "M0 0h18v18H0z",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}), __jsx("g", {
+  stroke: "currentColor",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: "2",
+  transform: "translate(2 2)",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, __jsx("circle", {
+  cx: "6.125",
+  cy: "6.125",
+  r: "6.125",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}), __jsx("path", {
+  d: "M13.373 13.373l-2.767-2.767",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+})), __jsx("path", {
+  d: "M0 0h18v18H0z",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+})));
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgSearch);
+
+/***/ }),
+
 /***/ "./components/Svg_spoon_and_fork/Svg_spoon_and_fork.js":
 /*!*************************************************************!*\
   !*** ./components/Svg_spoon_and_fork/Svg_spoon_and_fork.js ***!
@@ -3001,7 +3080,7 @@ const SvgSpoonAndFork = () => {
     },
     __self: undefined
   }, __jsx("stop", {
-    "stop-color": "#8B00AF",
+    stopColor: "#8B00AF",
     offset: "0%",
     __source: {
       fileName: _jsxFileName,
@@ -3009,28 +3088,28 @@ const SvgSpoonAndFork = () => {
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#D40062",
+    stopColor: "#D40062",
     offset: "90%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: undefined
   }), __jsx("stop", {
-    "stop-color": "#FF0613",
+    stopColor: "#FF0613",
     offset: "100%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: undefined
   }))), __jsx("path", {
     fill: "url(#linearGradientForkSpoon)",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     d: "M99.954 28.203c.589 11.78-7.784 22.265-19.861 24.87V94.41c.17 1.223-.418 2.429-1.51 3.092a3.47 3.47 0 0 1-3.581 0c-1.092-.663-1.681-1.87-1.51-3.092V53.072c-12.24-2.441-20.822-12.97-20.27-24.869C52.39 15.105 62.84 3.834 76.588 3c13.749.834 24.198 12.105 23.366 25.203zM77.068 46.925c10.126-.94 17.584-9.348 16.763-18.898.821-9.55-6.637-17.959-16.763-18.898-10.103.967-17.528 9.367-16.705 18.898-.823 9.53 6.602 17.93 16.705 18.898zM43.463 3.54a3.362 3.362 0 0 1 3.3 3.364v16.703c.594 12.497-7.853 23.62-20.037 26.382v43.852a3.366 3.366 0 0 1-1.523 3.281 3.355 3.355 0 0 1-3.613 0 3.366 3.366 0 0 1-1.524-3.28V49.988C7.882 47.226-.564 36.104.03 23.607V6.904c0-.892.354-1.747.984-2.378A3.357 3.357 0 0 1 3.39 3.54a3.362 3.362 0 0 1 3.3 3.364v16.703c-.517 8.834 4.978 16.907 13.377 19.654V6.904a3.366 3.366 0 0 1 1.524-3.28 3.355 3.355 0 0 1 3.613 0 3.366 3.366 0 0 1 1.523 3.28v36.357c8.413-2.73 13.915-10.814 13.377-19.654V6.904a3.362 3.362 0 0 1 3.36-3.364z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 16
     },
     __self: undefined
   }));
@@ -3063,7 +3142,7 @@ const SvgTelegram = () => __jsx("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 18 18",
   xmlnsXlink: "http://www.w3.org/1999/xlink",
-  "enable-background": "new 0 0 409.221 409.221",
+  enableBackground: "new 0 0 409.221 409.221",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 2
@@ -3071,7 +3150,7 @@ const SvgTelegram = () => __jsx("svg", {
   __self: undefined
 }, __jsx("g", {
   fill: "none",
-  "fill-rule": "evenodd",
+  fillRule: "evenodd",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 3
@@ -3120,7 +3199,7 @@ const SvgTwitter = () => __jsx("svg", {
   __self: undefined
 }, __jsx("g", {
   fill: "none",
-  "fill-rule": "evenodd",
+  fillRule: "evenodd",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 3
@@ -3194,28 +3273,28 @@ const foodTags = [{
   id: 7
 }, {
   title: "چلوکباب",
-  id: 0
+  id: 8
 }, {
   title: "ماهی",
-  id: 0
+  id: 9
 }, {
   title: "استیک",
-  id: 0
+  id: 10
 }, {
   title: "بشقاب",
-  id: 0
+  id: 11
 }, {
   title: "صبحانه",
-  id: 0
+  id: 12
 }, {
   title: "سوپ",
-  id: 0
+  id: 13
 }, {
   title: "غذاهای دریایی",
-  id: 0
+  id: 14
 }, {
   title: "آبمیوه طبیعی",
-  id: 0
+  id: 15
 }];
 
 function tagsCardRender() {
@@ -3227,6 +3306,7 @@ function tagsCardRender() {
     },
     __self: this
   }, __jsx("a", {
+    className: "tagsLink",
     href: "#",
     __source: {
       fileName: _jsxFileName,
@@ -3239,23 +3319,23 @@ function tagsCardRender() {
 
 const TagsCard = () => {
   return __jsx("section", {
-    class: "more-food ",
+    className: "more-food ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "more-food-flex container-width margin-v-15 ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: undefined
-  }, __jsx("div", {
-    class: "more-food-flex container-width margin-v-15 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 46
     },
     __self: undefined
   }, "\u0627\u0646\u062A\u062E\u0627\u0628 \u063A\u0630\u0627\u06CC \u0628\u06CC\u0634\u062A\u0631"), tagsCardRender()));

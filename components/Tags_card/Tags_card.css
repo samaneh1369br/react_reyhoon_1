@@ -4,19 +4,17 @@
         margin: 60px auto;
         padding: 0 5%;
     }
+    
     .more-food-flex{
         flex-flow: row wrap;
         display:flex;
-        
         justify-content: space-around;
     }
     .more-food-flex h3{
         width:30%;
         text-align: center;
-        font-size: 1.8rem;
-        height:4.7rem;
     }
-    .more-food-flex h3 a{
+    .tagsLink{
        background-color:white;
        /* box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.5); */
        border: 1px solid transparent;
@@ -25,21 +23,29 @@
        text-decoration: none;
        color: black;
        line-height: 4.3rem;
-
+       height:4.7rem;
+       font-size: 1.8rem;
+       font-weight: bolder;
     }
-
+    .tagsLink:hover{
+        box-shadow:  0 0.3rem 2rem rgba(0,0,0,.2)
+     }
     .more-food-flex h1{
         width:100%;
         text-align: center;
         font-size: 2.5rem;
         font-weight: normal;
-
     }
+    
     
 }
 @media   (min-width:769px) {
     .more-food-flex h3{
         width:12.5%;
-        font-size: 1.6rem;
     }
+    .tagsLink{
+        font-size: 1.7rem;
+        padding: 1rem 2.3rem;
+        font-weight: bolder;
+     }
 }

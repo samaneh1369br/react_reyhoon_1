@@ -36,9 +36,8 @@ const ArticleData=[
 const Article=()=>{
 
     return(
-        <article class="article margin-v-45">
-          {  renderArticleData()}
-
+        <article className="article margin-v-45">
+          {renderArticleData()}
         </article>
 
     )

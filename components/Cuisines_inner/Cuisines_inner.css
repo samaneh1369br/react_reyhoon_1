@@ -1,3 +1,27 @@
-.margin-v-15.margin-v-15{
-    margin:15px auto;
+
+@media  (min-width:320px)
+{
+    .foodLink.foodLink{
+        background: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 100%;
+        padding: 0 ;
+        margin: 0 ;
+    }
+    .foodLink:hover{
+        cursor: pointer;
+    }
+    .foodText{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        flex-flow:column wrap;
+        width:100%;
+        height: 100%; 
+        transition:margin-top  .2s ease-in,-webkit-transform .2s ease-in;
+       
+    }
+    .foodText:hover{
+        margin-top:-5px;
+    }  
 }

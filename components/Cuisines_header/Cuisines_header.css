@@ -9,16 +9,13 @@
     .which-food *{
         text-align: center;
         margin: 15px 0;
-        
     }
 
     .which-food h1{
-
         font-size: 2rem;
         font-weight: bold;
     }
     .which-food h2{
-
         font-size: 1.5rem;
         font-weight: normal;
     }

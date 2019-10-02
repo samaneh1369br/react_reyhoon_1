@@ -19,14 +19,14 @@ const FooterMiddleData=[
     const FooterMiddleRender=()=>{
      const   RenderedFooterMiddle=FooterMiddleData.map(
             (image)=>
-               <img id={image.id} src={image.source}/>
+               <img key={image.id} src={image.source}/>
             )
     return RenderedFooterMiddle
     }
 
 const FooterMiddle=()=>{
     return(
-            <div class="footer-middle">
+            <div className="footer-middle">
                  {FooterMiddleRender()}
             </div>
     );

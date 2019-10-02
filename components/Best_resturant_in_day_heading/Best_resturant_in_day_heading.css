@@ -1,5 +1,4 @@
 @media   (min-width:320px) {
-
     .container-flex {
         display:flex;
         margin: 0 auto;
@@ -13,18 +12,20 @@
     .flex-center{
         justify-content: center;
     }
+
     .marginTop{
         margin-top: 90px;
     }
+
     .phablet-only-max.phablet-only-max{
         display: none;
     }
 }
 @media   (min-width:769px) {
-
     .row-direction{
         flex-wrap: nowrap;
     }
+
     .phablet-only-max.phablet-only-max{
         display: flex;
     }

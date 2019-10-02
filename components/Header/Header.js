@@ -11,12 +11,12 @@ return(
                     </div>  
                     <nav className="help">  
                         <ul className="help">
-                            <li>راهنما</li>
+                            <li><a href="#">راهنما</a></li>
                         </ul>
                         <ul className="login">
-                            <li>عضویت</li>
+                            <li><a href="#">عضویت</a></li>
                             <li className="dash">|</li>
-                            <li>ورود</li>
+                            <li><a href="#">ورود</a></li>
                         </ul>
                     </nav>
                 </div>

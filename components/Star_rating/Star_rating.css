@@ -19,8 +19,10 @@
         37% 38%
         );
 }
-.active {background-color: gold;
-    border: 1px solid gold}
+.active {
+    background-color: gold;
+    border: 1px solid gold
+}
 .parent{
     display: flex;
     justify-content: space-between;

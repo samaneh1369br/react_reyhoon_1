@@ -5,24 +5,29 @@ import CuisinesHeader from "../Cuisines_header/Cuisines_header"
 const CuisinesData=[
     {food:"کباب",
     imageSrc:"https://dist.reyhoon-static.com/uploads/images/cuisines/kebab_1525012065.jpeg@!cuisine_card",
-    activeNumber:1836
+    activeNumber:1836,
+    id:0
      },
      {food:"پیتزا",
     imageSrc:"https://dist.reyhoon-static.com/uploads/images/cuisines/pizza_1539780235.jpeg@!cuisine_card",
-    activeNumber:1836
+    activeNumber:1836,
+    id:1
      },
      {food:"برگر",
     imageSrc:"https://dist.reyhoon-static.com/uploads/images/cuisines/hamburger_1539779150.jpeg@!cuisine_card",
-    activeNumber:1836
+    activeNumber:1836,
+    id:2
      },
      {food:"ساندویچ",
     imageSrc:"https://dist.reyhoon-static.com/uploads/images/cuisines/sandwich_1539782856.jpeg@!cuisine_card",
-    activeNumber:1836
+    activeNumber:1836,
+    id:3
      }
 ];
 function renderCuisinesCard(){
     const CuisinesCardRendered=CuisinesData.map(
-        (card)=><CuisinesInner typeFood={card.food} image={`${card.imageSrc}`} activeNumber={card.activeNumber}/>
+        (card)=>
+            <CuisinesInner key={card.id} typeFood={card.food} image={`${card.imageSrc}`} activeNumber={card.activeNumber}/>
     )
     return CuisinesCardRendered;
 }

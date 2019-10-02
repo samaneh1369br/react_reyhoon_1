@@ -10,18 +10,6 @@ export default class BranchCard extends React.Component{
             dataResturant:[]
          }
     }
-
-    // createBranchCard=(n)=>{
-    //         let i=0;
-    //         let array=[];
-    //         while(i<n){
-                                
-    //             let el=<BranchCardInner ind={i}/>;
-    //                 array.push(el);
-    //                 i++;
-    //             }
-    //             return(array);
-    // }
     componentDidMount(){
         this.setState({dataResturant:threeJson})
     }
@@ -34,7 +22,7 @@ export default class BranchCard extends React.Component{
                             {
                                 this.state.dataResturant.map((item,index)=>{ 
                                         return(
-                                        <div className="resturant-flex column-direction flex-evenly">
+                                        <div key={index} className="resturant-flex column-direction flex-evenly">
                                             <div>
                                                 <img src={item.image}/>
                                             </div>
@@ -46,7 +34,7 @@ export default class BranchCard extends React.Component{
                                             </div>
                                             <div>{item.description}</div> 
                                             <p>{item.address}</p>
-                                            <a href="#" className="btn btn-in-box">شروع سفارش</a>
+                                            <a href="#" className="btn-in-box">شروع سفارش</a>
                                         </div>
                                         )
 
