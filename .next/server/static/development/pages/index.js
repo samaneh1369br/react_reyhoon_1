@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -269,42 +269,94 @@ const Banner = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Banner_form.css */ "./components/Banner_form/Banner_form.css");
-/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Banner_form_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Svg_search/Svg_search */ "./components/Svg_search/Svg_search.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Banner_form.css */ "./components/Banner_form/Banner_form.css");
+/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Banner_form_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Svg_search/Svg_search */ "./components/Svg_search/Svg_search.js");
+/* harmony import */ var react_search_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-search-input */ "react-search-input");
+/* harmony import */ var react_search_input__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_search_input__WEBPACK_IMPORTED_MODULE_5__);
+
 
 var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Banner_form\\Banner_form.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
-  constructor() {
-    super();
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "submit", e => {
-      e.preventDefault();
-      e.target.querySelector("input[id='txt1']").value && e.target.querySelector("input[id='txt2']").value ? this.setState({
-        city: e.target.querySelector("input[id='txt1']").value + " . ",
-        address: e.target.querySelector("input[id='txt2']").value
-      }) : this.setState({
-        city: "هر دو ورودی را کامل کنید",
-        address: ""
+class Form extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+  constructor(props) {
+    super(props);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "getCities", async () => {
+      const respond = await fetch('https://stage.reyhoon.com/public-api/v1/cities', {
+        method: "GET"
+      });
+
+      if (respond.ok) {
+        const data = await respond.json();
+        this.setState({
+          responds: data
+        });
+      } else {
+        console.error("https_code" + respond.status);
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "regionGet", e => {
+      this.setState({
+        region: e.target.value
+      }, () => {
+        console.log(this.state.region);
       });
     });
 
-    this.submit = this.submit.bind(this);
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "submit", e => {
+      e.preventDefault();
+      e.target.querySelector("input[id='txt1']").value && e.target.querySelector("input[id='txt2']").value ? this.setState({
+        city: e.target.querySelector("input[id='txt1']").value + " . ",
+        region: e.target.querySelector("input[id='txt2']").value
+      }) : this.setState({
+        city: "هر دو ورودی را کامل کنید",
+        region: ""
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "searchUpdated", term => this.setState({
+      searchTerm: term
+    }));
+
+    this.submit = this.submit.bind(this); // this.cityGet=this.cityGet.bind(this);
+
+    this.searchUpdated = this.searchUpdated.bind(this);
     this.state = {
       city: "",
-      address: ""
+      region: "",
+      responds: [],
+      searchTerm: ''
     };
   }
 
+  async componentWillMount() {
+    this.getCities();
+  }
+
   render() {
+    const z = this.state.responds;
+
+    let p = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(z).map(function (key) {
+      return [Number(key), z[key]];
+    });
+
+    p = p[0];
+    console.log(p); //   this.state.responds.provinces.map((city)=>{console.log(city)})
+    // const filteredCities =this.state.responds.filter(createFilter(this.state.searchTerm,'name'));
+    // console.log(filteredCities)
+
     return __jsx("section", {
       style: {
         marginBottom: '30px',
@@ -313,13 +365,13 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "header-form-section margin-v-60",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 68
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 69
       },
       __self: this
     }, "\u0628\u0631\u0627\u06CC \u062F\u06CC\u062F\u0646 \u0644\u06CC\u0633\u062A \u0631\u0633\u062A\u0648\u0631\u0627\u0646\u200C\u0647\u0627 \u0648 \u0641\u0633\u062A\u200C\u0641\u0648\u062F\u200C\u0647\u0627\u06CC\u06CC \u06A9\u0647 \u0628\u0647 \u0634\u0645\u0627 \u0633\u0631\u0648\u06CC\u0633 \u0645\u06CC\u200C\u062F\u0647\u0646\u062F\u060C \u0645\u0646\u0637\u0642\u0647 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F."), __jsx("form", {
@@ -327,41 +379,41 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "header-form",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 70
       },
       __self: this
-    }, __jsx("input", {
+    }, __jsx(react_search_input__WEBPACK_IMPORTED_MODULE_5___default.a, {
       className: "child-1",
-      id: "txt1",
-      type: "text",
+      onChange: () => this.searchUpdated(),
       placeholder: "\u062A\u0647\u0631\u0627\u0646",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 71
       },
       __self: this
     }), __jsx("div", {
       className: "child-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 72
       },
       __self: this
     }, __jsx("span", {
       className: "child-2-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 73
       },
       __self: this
     }, "\xA9"), __jsx("input", {
       className: "child-2-input",
       type: "text",
       id: "txt2",
+      onChange: this.regionGet,
       placeholder: "\u0645\u062B\u0644\u0627 \u0646\u06CC\u0627\u0648\u0631\u0627\u0646",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 74
       },
       __self: this
     })), __jsx("button", {
@@ -369,27 +421,41 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 76
       },
       __self: this
-    }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 77
       },
       __self: this
     }))), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 81
       },
       __self: this
-    }, this.state.city, this.state.address));
+    }, this.state.city, this.state.region));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Form);
+/* harmony default export */ __webpack_exports__["default"] = (Form); // cityGet=(e)=>{
+//     this.setState({
+//         city:e.target.value
+//     },()=>{
+//             console.log(this.state.city);
+//             fetch(`https://www.reyhoon.com/public-api/v1/cities`).
+//             then(   respond=>{
+//                         var responeJson=  respond.json();
+//                         return responeJson
+//                     }
+//                 ).
+//             catch(  error=>{console.log(error+"    sddddddddddd")})
+//           } 
+//     )
+// }
 
 /***/ }),
 
@@ -3356,6 +3422,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
@@ -3583,7 +3660,7 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3606,6 +3683,17 @@ module.exports = require("core-js/library/fn/object/define-property");
 
 /***/ }),
 
+/***/ "core-js/library/fn/object/keys":
+/*!*************************************************!*\
+  !*** external "core-js/library/fn/object/keys" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/keys");
+
+/***/ }),
+
 /***/ "core-js/library/fn/parse-int":
 /*!***********************************************!*\
   !*** external "core-js/library/fn/parse-int" ***!
@@ -3625,6 +3713,17 @@ module.exports = require("core-js/library/fn/parse-int");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-search-input":
+/*!*************************************!*\
+  !*** external "react-search-input" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-search-input");
 
 /***/ })
 
