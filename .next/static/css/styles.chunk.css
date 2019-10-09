@@ -120,6 +120,7 @@
         text-align: center;
     }
     .header-form{
+        position:relative;
         max-width: 78rem;
         width:90%;
         background: white;
@@ -206,6 +207,7 @@
 
 @media   (min-width:769px) {
     .header-form{
+
         max-width: 78rem;
         width:90%;
         flex-flow: row nowrap;
@@ -235,7 +237,47 @@
         width:90%;
         margin: 0px auto;
         color:white;}
-       
+    .citySuggested , .regionSuggested{
+        list-style: none;
+        position: absolute;
+        border: 1px solid transparent;
+        background-color: white;
+        border-radius: 5px;
+        right: 9px;
+        width: 217px;
+        padding: 0;
+        top:62px;
+        margin: 0;
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+        display: none;
+        
+    }
+    .regionSuggested{  
+        right: 23rem;
+        width: 51.1rem;
+    }
+    .citySuggested>p{
+        color: black;
+        padding: 1.9rem 0;
+        margin: 0;
+        text-align: right;
+
+    }
+    .citySuggested li, .regionSuggested li{
+        padding:1.9rem 0;
+        vertical-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .showCitySuggested {
+        display: block;
+    }
+    
+    .showRegionSuggested {
+        display: block;
+    }
+   
+    
 
 }
 .search-svg{

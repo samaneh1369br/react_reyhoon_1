@@ -269,30 +269,33 @@ const Banner = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Banner_form.css */ "./components/Banner_form/Banner_form.css");
-/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Banner_form_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Svg_search/Svg_search */ "./components/Svg_search/Svg_search.js");
-/* harmony import */ var react_search_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-search-input */ "react-search-input");
-/* harmony import */ var react_search_input__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_search_input__WEBPACK_IMPORTED_MODULE_5__);
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_search_input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-search-input */ "react-search-input");
+/* harmony import */ var react_search_input__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_search_input__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "classnames");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Banner_form.css */ "./components/Banner_form/Banner_form.css");
+/* harmony import */ var _Banner_form_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Banner_form_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Svg_search/Svg_search */ "./components/Svg_search/Svg_search.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_6__);
 
 var _jsxFileName = "C:\\Users\\s.hajiramezani\\Documents\\samaneh-practice\\react_reyhoon_page_2\\components\\Banner_form\\Banner_form.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
-class Form extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+
+
+class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "getCities", async () => {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "getCities", async () => {
       const respond = await fetch('https://stage.reyhoon.com/public-api/v1/cities', {
         method: "GET"
       });
@@ -300,63 +303,116 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       if (respond.ok) {
         const data = await respond.json();
         this.setState({
-          responds: data
+          allCityies: data.cities
         });
       } else {
         console.error("https_code" + respond.status);
       }
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "regionGet", e => {
-      this.setState({
-        region: e.target.value
-      }, () => {
-        console.log(this.state.region);
-      });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "regionGet", e => {
+      const regionTyped = e.target.value;
+
+      if (regionTyped.length >= 4) {
+        setTimeout(() => {
+          this.setState({
+            region: regionTyped
+          }, async () => {
+            const respond = await fetch(`https://stage.reyhoon.com/location/query?query=${this.state.region}&city=${this.state.city}`);
+
+            if (respond.ok) {
+              const data = await respond.json();
+
+              if (data.suggestions.length > 0) {
+                this.setState({
+                  allRegion: data.suggestions,
+                  showSuggestRegion: true
+                });
+              }
+            } else {
+              console.error("https_code" + respond.status);
+            }
+          });
+        }, 2000);
+      }
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "submit", e => {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "submit", e => {
       e.preventDefault();
-      e.target.querySelector("input[id='txt1']").value && e.target.querySelector("input[id='txt2']").value ? this.setState({
-        city: e.target.querySelector("input[id='txt1']").value + " . ",
-        region: e.target.querySelector("input[id='txt2']").value
-      }) : this.setState({
-        city: "هر دو ورودی را کامل کنید",
-        region: ""
+      const node = react_dom__WEBPACK_IMPORTED_MODULE_6___default.a.findDOMNode(this);
+      const text1Value = e.target.querySelector("input[id='txt1']").value;
+      const text2Value = e.target.querySelector("input[id='txt2']").value;
+
+      if (text1Value && text2Value) {
+        node.querySelector("div[id='nullInput']").textContent = `${this.state.city} . ${this.state.region}`;
+      } else {
+        const node = react_dom__WEBPACK_IMPORTED_MODULE_6___default.a.findDOMNode(this);
+        node.querySelector("div[id='nullInput']").textContent = "لطفا ورودی را وارد کنید";
+        console.log("hi");
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "searchUpdated", term => {
+      let temp = term.target.value;
+
+      if (temp.length >= 2) {
+        this.setState({
+          searchTerm: temp
+        });
+      }
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "citySuggestedShow", () => {
+      this.setState({
+        showSuggestCity: true
       });
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "searchUpdated", term => this.setState({
-      searchTerm: term
-    }));
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "regionSuggestedShow", () => {
+      if (this.state.showSuggestRegion) this.setState({
+        showSuggestRegion: true
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "setCity", citySelected => {
+      const node = react_dom__WEBPACK_IMPORTED_MODULE_6___default.a.findDOMNode(this);
+      node.querySelector("input[id='txt2']").focus();
+      this.setState({
+        city: citySelected,
+        showSuggestCity: false
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "setRegion", regionSelected => {
+      this.setState({
+        region: regionSelected,
+        showSuggestRegion: false
+      });
+    });
 
     this.submit = this.submit.bind(this); // this.cityGet=this.cityGet.bind(this);
 
     this.searchUpdated = this.searchUpdated.bind(this);
+    this.suggestedCittyBlock = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
     this.state = {
       city: "",
       region: "",
-      responds: [],
-      searchTerm: ''
+      allCityies: [],
+      searchTerm: '',
+      sugestionCity: '',
+      showSuggestCity: false,
+      showSuggestRegion: false,
+      allRegion: []
     };
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     this.getCities();
   }
 
   render() {
-    const z = this.state.responds;
-
-    let p = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(z).map(function (key) {
-      return [Number(key), z[key]];
-    });
-
-    p = p[0];
-    console.log(p); //   this.state.responds.provinces.map((city)=>{console.log(city)})
-    // const filteredCities =this.state.responds.filter(createFilter(this.state.searchTerm,'name'));
-    // console.log(filteredCities)
-
+    console.log(this.state.showSuggestRegion);
+    const filteredCities = this.state.allCityies.filter(Object(react_search_input__WEBPACK_IMPORTED_MODULE_2__["createFilter"])(this.state.searchTerm, 'name'));
     return __jsx("section", {
       style: {
         marginBottom: '30px',
@@ -365,13 +421,13 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       className: "header-form-section margin-v-60",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 145
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 149
       },
       __self: this
     }, "\u0628\u0631\u0627\u06CC \u062F\u06CC\u062F\u0646 \u0644\u06CC\u0633\u062A \u0631\u0633\u062A\u0648\u0631\u0627\u0646\u200C\u0647\u0627 \u0648 \u0641\u0633\u062A\u200C\u0641\u0648\u062F\u200C\u0647\u0627\u06CC\u06CC \u06A9\u0647 \u0628\u0647 \u0634\u0645\u0627 \u0633\u0631\u0648\u06CC\u0633 \u0645\u06CC\u200C\u062F\u0647\u0646\u062F\u060C \u0645\u0646\u0637\u0642\u0647 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F."), __jsx("form", {
@@ -379,83 +435,118 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
       className: "header-form",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 150
       },
       __self: this
-    }, __jsx(react_search_input__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      className: "child-1",
-      onChange: () => this.searchUpdated(),
-      placeholder: "\u062A\u0647\u0631\u0627\u0646",
+    }, __jsx("input", {
+      id: "txt1",
+      value: this.state.city,
+      type: "text",
+      onFocus: () => this.citySuggestedShow(),
+      onChange: e => this.searchUpdated(e),
+      placeholder: "\u0627\u0646\u062A\u062E\u0627\u0628 \u06A9\u0646\u06CC\u062F",
+      autoComplete: "off",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 151
       },
       __self: this
-    }), __jsx("div", {
+    }), __jsx("ul", {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()('citySuggested', {
+        'showCitySuggested': this.state.showSuggestCity
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 160
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 163
+      },
+      __self: this
+    }, "( ", this.state.allCityies.length, ") \u062A\u062D\u062A \u067E\u0648\u0634\u0634"), filteredCities.map((city, key) => __jsx("li", {
+      onClick: () => this.setCity(city.name),
+      key: key,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 167
+      },
+      __self: this
+    }, city.name))), __jsx("div", {
       className: "child-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 174
       },
       __self: this
     }, __jsx("span", {
       className: "child-2-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 175
       },
       __self: this
     }, "\xA9"), __jsx("input", {
       className: "child-2-input",
+      autoComplete: "off",
       type: "text",
       id: "txt2",
-      onChange: this.regionGet,
+      onChange: () => {
+        this.regionGet;
+        this.regionSuggestedShow();
+      },
       placeholder: "\u0645\u062B\u0644\u0627 \u0646\u06CC\u0627\u0648\u0631\u0627\u0646",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 176
       },
       __self: this
-    })), __jsx("button", {
+    })), __jsx("ul", {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()('regionSuggested', {
+        'showRegionSuggested': this.state.showSuggestRegion
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 185
+      },
+      __self: this
+    }, this.state.allRegion.map((regionSuggested, key) => __jsx("li", {
+      key: key,
+      onClick: () => this.setRegion(regionSuggested.value),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 189
+      },
+      __self: this
+    }, regionSuggested.value))), __jsx("button", {
       className: "child-3",
       type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 192
       },
       __self: this
-    }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 193
       },
       __self: this
     }))), __jsx("div", {
+      id: "nullInput",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 197
       },
       __self: this
-    }, this.state.city, this.state.region));
+    }));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Form); // cityGet=(e)=>{
-//     this.setState({
-//         city:e.target.value
-//     },()=>{
-//             console.log(this.state.city);
-//             fetch(`https://www.reyhoon.com/public-api/v1/cities`).
-//             then(   respond=>{
-//                         var responeJson=  respond.json();
-//                         return responeJson
-//                     }
-//                 ).
-//             catch(  error=>{console.log(error+"    sddddddddddd")})
-//           } 
-//     )
-// }
+/* harmony default export */ __webpack_exports__["default"] = (Form);
 
 /***/ }),
 
@@ -3422,17 +3513,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
@@ -3672,6 +3752,17 @@ module.exports = __webpack_require__(/*! C:\Users\s.hajiramezani\Documents\saman
 
 /***/ }),
 
+/***/ "classnames":
+/*!*****************************!*\
+  !*** external "classnames" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("classnames");
+
+/***/ }),
+
 /***/ "core-js/library/fn/object/define-property":
 /*!************************************************************!*\
   !*** external "core-js/library/fn/object/define-property" ***!
@@ -3680,17 +3771,6 @@ module.exports = __webpack_require__(/*! C:\Users\s.hajiramezani\Documents\saman
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/define-property");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/keys":
-/*!*************************************************!*\
-  !*** external "core-js/library/fn/object/keys" ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/keys");
 
 /***/ }),
 
@@ -3713,6 +3793,17 @@ module.exports = require("core-js/library/fn/parse-int");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom");
 
 /***/ }),
 
