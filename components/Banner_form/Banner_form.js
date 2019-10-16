@@ -47,19 +47,20 @@ class Form  extends React.Component {
     }
 
     regionGet=(e)=>{
+        console.log(e)
         const regionTyped=e.target.value;
         if (regionTyped.length>=4)
-       {
+        {
            setTimeout(() => {
                 this.setState(
                     {
                         region:regionTyped
                     }
                     ,async()=>{
-                        
                         const respond= await fetch(`https://stage.reyhoon.com/location/query?query=${this.state.region}&city=${this.state.city}`)
                         if (respond.ok){
                             const data= await respond.json();
+                            console.log(data)
                             if (data.suggestions.length>0){
                                     this.setState(
                                         {
@@ -178,7 +179,7 @@ class Form  extends React.Component {
                             autoComplete="off"
                             type="text"
                             id="txt2"
-                            onChange={()=>{this.regionGet ;this.regionSuggestedShow()}}
+                            onChange={(e)=>{this.regionGet(e) ; this.regionSuggestedShow();}}
                             placeholder="مثلا نیاوران"
                         />
                     </div>

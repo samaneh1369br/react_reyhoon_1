@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -311,6 +311,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "regionGet", e => {
+      console.log(e);
       const regionTyped = e.target.value;
 
       if (regionTyped.length >= 4) {
@@ -322,6 +323,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
 
             if (respond.ok) {
               const data = await respond.json();
+              console.log(data);
 
               if (data.suggestions.length > 0) {
                 this.setState({
@@ -421,13 +423,13 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "header-form-section margin-v-60",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 146
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149
+        lineNumber: 150
       },
       __self: this
     }, "\u0628\u0631\u0627\u06CC \u062F\u06CC\u062F\u0646 \u0644\u06CC\u0633\u062A \u0631\u0633\u062A\u0648\u0631\u0627\u0646\u200C\u0647\u0627 \u0648 \u0641\u0633\u062A\u200C\u0641\u0648\u062F\u200C\u0647\u0627\u06CC\u06CC \u06A9\u0647 \u0628\u0647 \u0634\u0645\u0627 \u0633\u0631\u0648\u06CC\u0633 \u0645\u06CC\u200C\u062F\u0647\u0646\u062F\u060C \u0645\u0646\u0637\u0642\u0647 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F."), __jsx("form", {
@@ -435,7 +437,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       className: "header-form",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 151
       },
       __self: this
     }, __jsx("input", {
@@ -448,7 +450,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       autoComplete: "off",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 152
       },
       __self: this
     }), __jsx("ul", {
@@ -457,13 +459,13 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 161
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163
+        lineNumber: 164
       },
       __self: this
     }, "( ", this.state.allCityies.length, ") \u062A\u062D\u062A \u067E\u0648\u0634\u0634"), filteredCities.map((city, key) => __jsx("li", {
@@ -471,21 +473,21 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       key: key,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 168
       },
       __self: this
     }, city.name))), __jsx("div", {
       className: "child-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 174
+        lineNumber: 175
       },
       __self: this
     }, __jsx("span", {
       className: "child-2-icon",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175
+        lineNumber: 176
       },
       __self: this
     }, "\xA9"), __jsx("input", {
@@ -493,14 +495,14 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       autoComplete: "off",
       type: "text",
       id: "txt2",
-      onChange: () => {
-        this.regionGet;
+      onChange: e => {
+        this.regionGet(e);
         this.regionSuggestedShow();
       },
       placeholder: "\u0645\u062B\u0644\u0627 \u0646\u06CC\u0627\u0648\u0631\u0627\u0646",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176
+        lineNumber: 177
       },
       __self: this
     })), __jsx("ul", {
@@ -509,7 +511,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 186
       },
       __self: this
     }, this.state.allRegion.map((regionSuggested, key) => __jsx("li", {
@@ -517,7 +519,7 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onClick: () => this.setRegion(regionSuggested.value),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 189
+        lineNumber: 190
       },
       __self: this
     }, regionSuggested.value))), __jsx("button", {
@@ -525,20 +527,20 @@ class Form extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       type: "submit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
+        lineNumber: 193
       },
       __self: this
     }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 193
+        lineNumber: 194
       },
       __self: this
     }))), __jsx("div", {
       id: "nullInput",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197
+        lineNumber: 198
       },
       __self: this
     }));
@@ -3740,7 +3742,7 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

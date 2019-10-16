@@ -244,6 +244,7 @@ function (_React$Component) {
     })));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "regionGet", function (e) {
+      console.log(e);
       var regionTyped = e.target.value;
 
       if (regionTyped.length >= 4) {
@@ -267,7 +268,7 @@ function (_React$Component) {
                     respond = _context2.sent;
 
                     if (!respond.ok) {
-                      _context2.next = 10;
+                      _context2.next = 11;
                       break;
                     }
 
@@ -276,6 +277,7 @@ function (_React$Component) {
 
                   case 6:
                     data = _context2.sent;
+                    console.log(data);
 
                     if (data.suggestions.length > 0) {
                       _this.setState({
@@ -284,13 +286,13 @@ function (_React$Component) {
                       });
                     }
 
-                    _context2.next = 11;
+                    _context2.next = 12;
                     break;
 
-                  case 10:
+                  case 11:
                     console.error("https_code" + respond.status);
 
-                  case 11:
+                  case 12:
                   case "end":
                     return _context2.stop();
                 }
@@ -414,13 +416,13 @@ function (_React$Component) {
         className: "header-form-section margin-v-60",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 150
         },
         __self: this
       }, "\u0628\u0631\u0627\u06CC \u062F\u06CC\u062F\u0646 \u0644\u06CC\u0633\u062A \u0631\u0633\u062A\u0648\u0631\u0627\u0646\u200C\u0647\u0627 \u0648 \u0641\u0633\u062A\u200C\u0641\u0648\u062F\u200C\u0647\u0627\u06CC\u06CC \u06A9\u0647 \u0628\u0647 \u0634\u0645\u0627 \u0633\u0631\u0648\u06CC\u0633 \u0645\u06CC\u200C\u062F\u0647\u0646\u062F\u060C \u0645\u0646\u0637\u0642\u0647 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F."), __jsx("form", {
@@ -428,7 +430,7 @@ function (_React$Component) {
         className: "header-form",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 151
         },
         __self: this
       }, __jsx("input", {
@@ -445,7 +447,7 @@ function (_React$Component) {
         autoComplete: "off",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 152
         },
         __self: this
       }), __jsx("ul", {
@@ -454,13 +456,13 @@ function (_React$Component) {
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 161
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
         },
         __self: this
       }, "( ", this.state.allCityies.length, ") \u062A\u062D\u062A \u067E\u0648\u0634\u0634"), filteredCities.map(function (city, key) {
@@ -471,7 +473,7 @@ function (_React$Component) {
           key: key,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 167
+            lineNumber: 168
           },
           __self: this
         }, city.name);
@@ -479,14 +481,14 @@ function (_React$Component) {
         className: "child-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 175
         },
         __self: this
       }, __jsx("span", {
         className: "child-2-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 176
         },
         __self: this
       }, "\xA9"), __jsx("input", {
@@ -494,15 +496,15 @@ function (_React$Component) {
         autoComplete: "off",
         type: "text",
         id: "txt2",
-        onChange: function onChange() {
-          _this2.regionGet;
+        onChange: function onChange(e) {
+          _this2.regionGet(e);
 
           _this2.regionSuggestedShow();
         },
         placeholder: "\u0645\u062B\u0644\u0627 \u0646\u06CC\u0627\u0648\u0631\u0627\u0646",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 177
         },
         __self: this
       })), __jsx("ul", {
@@ -511,7 +513,7 @@ function (_React$Component) {
         }),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
+          lineNumber: 186
         },
         __self: this
       }, this.state.allRegion.map(function (regionSuggested, key) {
@@ -522,7 +524,7 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 189
+            lineNumber: 190
           },
           __self: this
         }, regionSuggested.value);
@@ -531,20 +533,20 @@ function (_React$Component) {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 193
         },
         __self: this
       }, __jsx(_Svg_search_Svg_search__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 194
         },
         __self: this
       }))), __jsx("div", {
         id: "nullInput",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197
+          lineNumber: 198
         },
         __self: this
       }));
@@ -8853,7 +8855,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!***********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cs.hajiramezani%5CDocuments%5Csamaneh-practice%5Creact_reyhoon_page_2%5Cpages%5Cindex.js ***!
   \***********************************************************************************************************************************************************************/
@@ -8876,5 +8878,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
